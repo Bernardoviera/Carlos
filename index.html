@@ -1,734 +1,404 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Carlos Zavele – Especialista em Dropshipping sem Estoque. Marcas que faturam de 70K a 200K/mês." />
-  <meta property="og:title" content="Carlos Zavele | Especialista em Dropshipping" />
-  <meta property="og:description" content="Aprenda a construir uma marca milionária sem estoque com o Carlos Zavele." />
-  <title>Carlos Zavele | Especialista em Dropshipping</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Carlos Zavele – Especialista em Dropshipping. Marcas que faturam 70K a 200K/mês sem estoque."/>
+  <title>Carlos Zavele | Dropshipping Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
   <style>
-    /* ─── RESET & BASE ─────────────────────────────────────── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg:     #07070f;
-      --bg2:    #0c0c1a;
-      --card:   #0f0f1e;
-      --border: rgba(255,255,255,0.07);
-      --text:   #eeeeff;
-      --muted:  #7777aa;
-
-      --blue:    #3b82f6;
-      --blue-l:  #93c5fd;
-      --gold:    #f59e0b;
-      --gold-l:  #fde68a;
-      --purple:  #8b5cf6;
-      --purple-l:#c4b5fd;
-      --teal:    #06b6d4;
-      --teal-l:  #67e8f9;
-      --pink:    #ec4899;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* ─── NAV ──────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 5%;
-      background: rgba(7,7,15,0.8);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-size: 17px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #fff 0%, #aaaacc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .nav-cta {
-      padding: 9px 20px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-radius: 10px;
-      font-size: 13.5px;
-      font-weight: 700;
-      color: #fff !important;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-    }
-
-    /* ─── HERO ─────────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 5% 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Glow de fundo */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 10%;
-      right: -10%;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(ellipse, rgba(59,130,246,0.10) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -10%;
-      width: 600px;
-      height: 500px;
-      background: radial-gradient(ellipse, rgba(139,92,246,0.08) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      max-width: 1100px;
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Texto */
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(59,130,246,0.1);
-      border: 1px solid rgba(59,130,246,0.2);
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--blue-l);
-      letter-spacing: 0.4px;
-      margin-bottom: 24px;
-      width: fit-content;
-    }
-
-    .hero-tag span { color: var(--muted); font-weight: 400; }
-
-    .hero-h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      font-weight: 900;
-      line-height: 1.08;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
-
-    .hero-h1 .grad {
-      background: linear-gradient(135deg, var(--blue-l) 0%, var(--purple-l) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 460px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 36px rgba(59,130,246,.35);
-      opacity: 0.9;
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      transition: border-color 0.22s ease, background 0.22s ease;
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.2);
-      background: rgba(255,255,255,0.04);
-    }
-
-    /* Foto / visual */
-    .hero-visual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .hero-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 32px;
-      width: 100%;
-      max-width: 380px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -30%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(ellipse, rgba(139,92,246,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(139,92,246,0.3));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-      /* Troque por <img> quando tiver a foto real */
-    }
-
-    .hero-card-name {
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .hero-card-role {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .metric {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    .metric-val {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .metric-lbl {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-      font-weight: 500;
-    }
-
-    .metric-val.blue   { color: var(--blue-l); }
-    .metric-val.gold   { color: var(--gold-l); }
-    .metric-val.purple { color: var(--purple-l); }
-    .metric-val.teal   { color: var(--teal-l); }
-
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
-      .hero-tag, .hero-actions { margin-left: auto; margin-right: auto; justify-content: center; }
-      .hero-sub { margin-left: auto; margin-right: auto; }
-      .hero-visual { order: -1; }
-      .hero-card { max-width: 340px; }
-    }
-
-    /* ─── SECTION BASE ──────────────────────────────────────── */
-    section { padding: 96px 5%; }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--blue-l);
-      margin-bottom: 14px;
-    }
-
-    .section-h2 {
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 900;
-      letter-spacing: -1px;
-      line-height: 1.12;
-      margin-bottom: 16px;
-    }
-
-    .section-sub {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-      max-width: 520px;
-    }
-
-    /* ─── PRODUCTS ──────────────────────────────────────────── */
-    #produtos { background: var(--bg2); }
-
-    .products-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 48px;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .product-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
-      cursor: pointer;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card.featured {
-      border-color: rgba(245,158,11,0.3);
-      background: linear-gradient(160deg, #0f0f1e 0%, #1a1408 100%);
-    }
-
-    .product-card.featured:hover {
-      box-shadow: 0 14px 48px rgba(245,158,11,.2);
-    }
-
-    .featured-tag {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: var(--gold);
-      color: #000;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 8px;
-    }
-
-    .prod-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-    }
-
-    .prod-title {
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 1.25;
-    }
-
-    .prod-desc {
-      font-size: 13.5px;
-      color: var(--muted);
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .prod-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 12px;
-      font-size: 13.5px;
-      font-weight: 700;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .prod-cta:hover { opacity: 0.85; transform: translateX(2px); }
-
-    .cta-blue   { background: rgba(59,130,246,.15);  color: var(--blue-l); }
-    .cta-gold   { background: rgba(245,158,11,.15);  color: var(--gold-l); }
-    .cta-purple { background: rgba(139,92,246,.15);  color: var(--purple-l); }
-    .cta-teal   { background: rgba(6,182,212,.15);   color: var(--teal-l); }
-
-    /* ─── ABOUT ─────────────────────────────────────────────── */
-    #sobre .section-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .about-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .about-list li {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-
-    .about-check {
-      width: 22px;
-      height: 22px;
-      border-radius: 7px;
-      background: rgba(59,130,246,.15);
-      color: var(--blue-l);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .about-list p {
-      font-size: 14.5px;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .about-list strong { color: var(--text); }
-
-    .about-visual {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .about-stat-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .about-stat {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 16px;
-    }
-
-    .about-stat-val {
-      font-size: 26px;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    .about-stat-lbl {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 900px) {
-      #sobre .section-inner { grid-template-columns: 1fr; gap: 48px; }
-    }
-
-    /* ─── CTA BAND ──────────────────────────────────────────── */
-    .cta-band {
-      padding: 80px 5%;
-      background: linear-gradient(160deg, rgba(59,130,246,0.07) 0%, rgba(139,92,246,0.07) 100%);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .cta-band .section-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .cta-band .section-h2 { margin-bottom: 0; }
-    .cta-band .section-sub { text-align: center; max-width: 480px; }
-
-    .cta-band-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* ─── FOOTER ───────────────────────────────────────────── */
-    footer {
-      padding: 48px 5%;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-size: 17px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #fff 0%, #aaaacc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover { color: var(--text); }
-
-    .footer-social {
-      display: flex;
-      gap: 12px;
-    }
-
-    .social-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--muted);
-      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .social-btn:hover {
-      background: rgba(255,255,255,0.1);
-      color: var(--text);
-      transform: translateY(-2px);
-    }
-
-    .footer-copy {
-      width: 100%;
-      text-align: center;
-      font-size: 12px;
-      color: rgba(255,255,255,0.15);
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      margin-top: 12px;
-    }
-
-    /* ─── SCROLL ANIMATIONS ─────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1),
-                  transform 0.6s cubic-bezier(0.4,0,0.2,1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* ═══ RESET ═════════════════════════════════════════════════════ */
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:      #03030b;
+    --bg2:     #070710;
+    --surface: #0a0a18;
+    --card:    #0d0d1e;
+    --border:  rgba(255,255,255,.06);
+    --text:    #f0f0fa;
+    --muted:   #6b6b90;
+
+    --gold:    #f5a623; --goldl:  #ffd580;
+    --blue:    #3b7ff5; --bluel:  #7eb8ff;
+    --purple:  #9b6bfa; --purplel:#c4a7ff;
+    --teal:    #0fc4d4; --teall:  #6ee7f0;
+    --pink:    #f43f8e;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,sans-serif;
+    background:var(--bg);color:var(--text);
+    overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit}
+
+  /* ═══ ORBS ══════════════════════════════════════════════════════ */
+  .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(130px);will-change:transform}
+  .orb1{width:60vw;height:50vw;top:-10%;left:-10%;
+        background:radial-gradient(ellipse,rgba(59,127,245,.14) 0%,transparent 70%);
+        animation:d1 16s ease-in-out infinite}
+  .orb2{width:50vw;height:42vw;bottom:-8%;right:-10%;
+        background:radial-gradient(ellipse,rgba(155,107,250,.12) 0%,transparent 70%);
+        animation:d2 20s ease-in-out infinite}
+  .orb3{width:35vw;height:30vw;top:50%;left:35%;
+        background:radial-gradient(ellipse,rgba(245,166,35,.08) 0%,transparent 70%);
+        animation:d3 24s ease-in-out infinite}
+  @keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,-60px) scale(1.07)}}
+  @keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,40px) scale(1.05)}}
+  @keyframes d3{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,50px) scale(.93)}}
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.025;
+         background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+         background-size:200px}
+
+  /* ═══ NAV ════════════════════════════════════════════════════════ */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 5%;
+    background:rgba(3,3,11,.75);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-logo{
+    font-family:'Syne',sans-serif;
+    font-size:16px;font-weight:800;letter-spacing:-.3px;
+    background:linear-gradient(120deg,#fff 0%,rgba(255,255,255,.5) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .nav-items{display:flex;align-items:center;gap:28px}
+  .nav-items a{font-size:13.5px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-items a:hover{color:var(--text)}
+  .nav-pill{
+    padding:9px 22px;
+    background:linear-gradient(120deg,var(--blue),var(--purple));
+    border-radius:99px;
+    font-size:13px;font-weight:700;color:#fff !important;
+    transition:opacity .2s,transform .2s;
+  }
+  .nav-pill:hover{opacity:.85;transform:translateY(-1px)}
+  @media(max-width:640px){.nav-items .hide-sm{display:none}}
+
+  /* ═══ HERO ══════════════════════════════════════════════════════ */
+  .hero{
+    position:relative;z-index:2;
+    min-height:100vh;
+    display:flex;align-items:center;
+    padding:120px 5% 80px;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:1140px;width:100%;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  }
+
+  /* left */
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--gold);margin-bottom:28px;
+  }
+  .hero-eyebrow::before{content:'';display:block;width:22px;height:1.5px;background:var(--gold)}
+  .hero-h1{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(42px,6vw,72px);
+    font-weight:800;line-height:.98;letter-spacing:-2px;
+    margin-bottom:24px;
+  }
+  .h1-grad{
+    background:linear-gradient(135deg,var(--bluel) 0%,var(--purplel) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .hero-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:40px;max-width:440px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:15px 30px;
+    background:linear-gradient(120deg,var(--blue),var(--purple));
+    border-radius:14px;font-size:15px;font-weight:700;color:#fff;
+    transition:transform .22s,box-shadow .22s,opacity .22s;
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,127,245,.35);opacity:.9}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:15px 30px;
+    background:transparent;border:1px solid rgba(255,255,255,.1);
+    border-radius:14px;font-size:15px;font-weight:600;color:var(--text);
+    transition:border-color .22s,background .22s;
+  }
+  .btn-ghost:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+
+  /* right — card */
+  .hero-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:28px;padding:32px;
+    position:relative;overflow:hidden;
+  }
+  .hero-card::before{
+    content:'';position:absolute;top:-50%;right:-30%;
+    width:320px;height:320px;
+    background:radial-gradient(ellipse,rgba(155,107,250,.12) 0%,transparent 70%);
+    pointer-events:none;
+  }
+  .hc-monogram{
+    font-family:'Syne',sans-serif;
+    font-size:36px;font-weight:800;
+    background:linear-gradient(135deg,var(--blue),var(--purple));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    line-height:1;margin-bottom:22px;
+    position:relative;z-index:1;
+  }
+  .hc-name{font-size:20px;font-weight:800;margin-bottom:4px;position:relative;z-index:1}
+  .hc-role{font-size:13px;color:var(--muted);margin-bottom:24px;position:relative;z-index:1}
+  .hc-metrics{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;
+    position:relative;z-index:1;
+  }
+  .hc-m{
+    background:rgba(255,255,255,.04);border:1px solid var(--border);
+    border-radius:14px;padding:16px;
+  }
+  .hc-m-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
+  .hc-m-lbl{font-size:11px;color:var(--muted);font-weight:500;margin-top:4px}
+
+  @media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:52px;text-align:center}
+    .hero-eyebrow,.hero-sub,.hero-ctas{margin-left:auto;margin-right:auto;justify-content:center}
+    .hero-card{order:-1;max-width:360px;margin:0 auto}
+  }
+
+  /* ═══ SECTION BASE ═══════════════════════════════════════════════ */
+  .section{position:relative;z-index:2;padding:100px 5%}
+  .si{max-width:1140px;margin:0 auto}
+  .s-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--gold);margin-bottom:16px;
+  }
+  .s-eyebrow::before{content:'';display:block;width:18px;height:1.5px;background:var(--gold)}
+  .s-h2{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(32px,5vw,50px);
+    font-weight:800;letter-spacing:-1.2px;line-height:1.05;
+    margin-bottom:16px;
+  }
+  .s-sub{font-size:16px;color:var(--muted);line-height:1.75;max-width:500px}
+
+  /* ═══ JOURNEY / PRODUTOS ════════════════════════════════════════ */
+  #produtos{background:var(--bg2)}
+  .prod-header{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:24px;margin-bottom:52px;
+  }
+  .prod-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+  }
+
+  /* ── Journey card ── */
+  .j-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:24px;padding:28px;
+    display:flex;flex-direction:column;gap:18px;
+    position:relative;overflow:hidden;
+    transition:transform .25s ease,border-color .25s,box-shadow .25s;
+  }
+  .j-card:hover{transform:translateY(-5px)}
+  .j-card-top{height:3px;position:absolute;top:0;left:0;right:0;border-radius:24px 24px 0 0}
+  .jt-blue   {background:linear-gradient(90deg,var(--blue),var(--bluel))}
+  .jt-gold   {background:linear-gradient(90deg,var(--gold),var(--goldl))}
+  .jt-purple {background:linear-gradient(90deg,var(--purple),var(--purplel))}
+  .jt-teal   {background:linear-gradient(90deg,var(--teal),var(--teall))}
+
+  .j-card.featured{
+    border-color:rgba(245,166,35,.28);
+    background:linear-gradient(160deg,#0f0f1e,#160f05);
+  }
+  .j-card.featured:hover{box-shadow:0 16px 56px rgba(245,166,35,.18)}
+
+  .feat-badge{
+    position:absolute;top:18px;right:18px;
+    background:var(--gold);color:#000;
+    font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
+    padding:4px 10px;border-radius:8px;
+  }
+  .j-icon{
+    width:52px;height:52px;border-radius:15px;
+    display:flex;align-items:center;justify-content:center;font-size:22px;
+  }
+  .ji-blue  {background:rgba(59,127,245,.12)}
+  .ji-gold  {background:rgba(245,166,35,.12)}
+  .ji-purple{background:rgba(155,107,250,.12)}
+  .ji-teal  {background:rgba(15,196,212,.12)}
+
+  .j-title{font-size:18px;font-weight:800;line-height:1.2;letter-spacing:-.3px}
+  .j-desc {font-size:13.5px;color:var(--muted);line-height:1.65;flex:1}
+  .j-price{font-size:24px;font-weight:900;letter-spacing:-.5px;color:var(--goldl)}
+  .j-price sub{font-size:13px;font-weight:500;color:var(--muted);vertical-align:baseline}
+  .j-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 20px;border-radius:12px;
+    font-size:14px;font-weight:700;
+    transition:opacity .2s,transform .2s;
+  }
+  .j-cta:hover{opacity:.85;transform:translateX(3px)}
+  .jc-blue  {background:rgba(59,127,245,.12);color:var(--bluel)}
+  .jc-gold  {background:rgba(245,166,35,.12);color:var(--goldl)}
+  .jc-purple{background:rgba(155,107,250,.12);color:var(--purplel)}
+  .jc-teal  {background:rgba(15,196,212,.12);color:var(--teall)}
+
+  /* ═══ SOBRE ══════════════════════════════════════════════════════ */
+  .sobre-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    margin-top:64px;
+  }
+  .about-list{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:32px}
+  .about-list li{display:flex;gap:14px;align-items:flex-start}
+  .al-dot{
+    width:22px;height:22px;border-radius:8px;
+    background:rgba(59,127,245,.12);color:var(--bluel);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;flex-shrink:0;margin-top:2px;
+  }
+  .al-text{font-size:14.5px;color:var(--muted);line-height:1.65}
+  .al-text strong{color:var(--text)}
+
+  .sobre-visual{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:28px;padding:32px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .sv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .sv-item{
+    background:rgba(255,255,255,.04);border:1px solid var(--border);
+    border-radius:16px;padding:18px;
+  }
+  .sv-val{font-size:26px;font-weight:900;letter-spacing:-.8px;line-height:1}
+  .sv-lbl{font-size:12px;color:var(--muted);font-weight:500;margin-top:5px}
+
+  @media(max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:48px}}
+
+  /* ═══ CTA BAND ═══════════════════════════════════════════════════ */
+  .cta-band{
+    position:relative;z-index:2;
+    padding:96px 5%;
+    background:linear-gradient(160deg,rgba(59,127,245,.06) 0%,rgba(155,107,250,.06) 100%);
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    text-align:center;
+  }
+  .cta-band .si{display:flex;flex-direction:column;align-items:center;gap:28px}
+  .cta-band-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+
+  /* ═══ FOOTER ═════════════════════════════════════════════════════ */
+  footer{
+    position:relative;z-index:2;
+    padding:52px 5% 44px;
+    border-top:1px solid var(--border);
+  }
+  .ft{max-width:1140px;margin:0 auto}
+  .ft-top{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:24px;margin-bottom:32px;
+  }
+  .ft-logo{
+    font-family:'Syne',sans-serif;
+    font-size:18px;font-weight:800;letter-spacing:-.3px;
+    background:linear-gradient(120deg,#fff,rgba(255,255,255,.4));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .ft-nav{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
+  .ft-nav a{font-size:13px;color:var(--muted);transition:color .2s}
+  .ft-nav a:hover{color:var(--text)}
+  .ft-socials{display:flex;gap:10px}
+  .soc{
+    width:38px;height:38px;border-radius:10px;
+    background:rgba(255,255,255,.04);border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;color:var(--muted);
+    transition:background .2s,color .2s,transform .2s;
+  }
+  .soc:hover{background:rgba(255,255,255,.09);color:var(--text);transform:translateY(-2px)}
+  .ft-copy{
+    padding-top:24px;border-top:1px solid var(--border);
+    font-size:12px;color:rgba(255,255,255,.14);
+    text-align:center;
+  }
+
+  /* ═══ REVEAL ══════════════════════════════════════════════════════ */
+  .rev{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .6s cubic-bezier(.4,0,.2,1),
+                transform .6s cubic-bezier(.4,0,.2,1);
+  }
+  .rev.on{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
 
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- ── NAV ── -->
   <nav>
     <div class="nav-logo">Carlos Zavele</div>
-    <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="/links/" class="nav-cta">Ver Todos os Links</a></li>
-    </ul>
+    <div class="nav-items">
+      <a href="#produtos" class="hide-sm">Produtos</a>
+      <a href="#sobre" class="hide-sm">Sobre</a>
+      <a href="/links/" class="nav-pill">
+        <i class="fas fa-rocket" style="font-size:12px"></i> Links Úteis
+      </a>
+    </div>
   </nav>
 
   <!-- ── HERO ── -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-text">
-        <div class="hero-tag">
-          🚀 <span>Especialista em Dropshipping sem Estoque</span>
-        </div>
+      <div>
+        <div class="hero-eyebrow">Dropshipping Expert</div>
         <h1 class="hero-h1">
           Construa sua<br/>
-          <span class="grad">Marca Milionária</span><br/>
+          <span class="h1-grad">Marca Milionária</span><br/>
           sem Estoque
         </h1>
         <p class="hero-sub">
-          Método comprovado que já ajudou centenas de empreendedores a faturarem de 70K a 200K por mês com Dropshipping.
+          Método comprovado que já ajudou centenas de empreendedores a faturarem de <strong style="color:var(--goldl)">70K a 200K/mês</strong> com Dropshipping sem precisar gerenciar estoque.
         </p>
-        <div class="hero-actions">
+        <div class="hero-ctas">
           <a href="/links/" class="btn-primary">
-            <i class="fas fa-rocket"></i>
-            Ver Meus Links
+            <i class="fas fa-rocket" style="font-size:13px"></i> Ver Meus Links
           </a>
-          <a href="#sobre" class="btn-secondary">
-            Saiba Mais
-            <i class="fas fa-chevron-down" style="font-size:11px;"></i>
+          <a href="#sobre" class="btn-ghost">
+            Saiba Mais <i class="fas fa-chevron-down" style="font-size:11px"></i>
           </a>
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div>
         <div class="hero-card">
-          <div class="hero-avatar">CZ</div>
-          <div class="hero-card-name">Carlos Zavele</div>
-          <div class="hero-card-role">@carloseduardooficial · Dropshipping Expert</div>
-          <div class="hero-metrics">
-            <div class="metric">
-              <div class="metric-val blue">+100K</div>
-              <div class="metric-lbl">Seguidores</div>
+          <div class="hc-monogram">CZ</div>
+          <div class="hc-name">Carlos Zavele</div>
+          <div class="hc-role">@carloseduardooficial · Dropshipping Expert</div>
+          <div class="hc-metrics">
+            <div class="hc-m">
+              <div class="hc-m-val" style="color:var(--bluel)">+100K</div>
+              <div class="hc-m-lbl">Seguidores</div>
             </div>
-            <div class="metric">
-              <div class="metric-val gold">+500</div>
-              <div class="metric-lbl">Alunos</div>
+            <div class="hc-m">
+              <div class="hc-m-val" style="color:var(--goldl)">+500</div>
+              <div class="hc-m-lbl">Alunos</div>
             </div>
-            <div class="metric">
-              <div class="metric-val purple">200K</div>
-              <div class="metric-lbl">Fat. Mês</div>
+            <div class="hc-m">
+              <div class="hc-m-val" style="color:var(--purplel)">200K</div>
+              <div class="hc-m-lbl">Fat./Mês</div>
             </div>
-            <div class="metric">
-              <div class="metric-val teal">4</div>
-              <div class="metric-lbl">Produtos</div>
+            <div class="hc-m">
+              <div class="hc-m-val" style="color:var(--teall)">4</div>
+              <div class="hc-m-lbl">Produtos</div>
             </div>
           </div>
         </div>
@@ -737,162 +407,141 @@
   </section>
 
   <!-- ── PRODUTOS ── -->
-  <section id="produtos">
-    <div class="section-inner">
-      <div class="products-header reveal">
+  <section class="section" id="produtos">
+    <div class="si">
+      <div class="prod-header rev">
         <div>
-          <div class="section-tag"><i class="fas fa-fire"></i> Produtos</div>
-          <h2 class="section-h2" style="margin-bottom:0">O que eu ofereço</h2>
+          <div class="s-eyebrow">Produtos</div>
+          <h2 class="s-h2" style="margin-bottom:0">Sua jornada começa aqui</h2>
         </div>
-        <p class="section-sub" style="max-width:360px;">
-          Do guia de entrada até a mentoria individual mais exclusiva — há um caminho para cada momento da sua jornada.
+        <p class="s-sub" style="max-width:340px">
+          Do primeiro passo até a mentoria mais exclusiva — há um produto certo para cada momento.
         </p>
       </div>
 
-      <div class="products-grid">
-
-        <!-- P1: Guia Dropshipping -->
-        <div class="product-card reveal" style="transition-delay:0.05s">
-          <div class="prod-icon" style="background:rgba(59,130,246,.12);font-size:24px;">🚀</div>
-          <div class="prod-title">Guia Destravar das Vendas</div>
-          <div class="prod-desc">
-            Guia completo para fazer 1K por dia com Dropshipping. O ponto de entrada perfeito para quem está começando.
-            <br/><br/><strong style="color:#fde68a;font-size:17px;">R$27,00</strong>
-          </div>
-          <a class="prod-cta cta-blue"
-             href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid"
-             target="_blank" rel="noopener">
-            Garantir minha vaga <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+      <div class="prod-grid">
+        <div class="j-card rev" style="transition-delay:.05s">
+          <div class="j-card-top jt-blue"></div>
+          <div class="j-icon ji-blue">🚀</div>
+          <div class="j-title">Guia Destravar das Vendas</div>
+          <div class="j-desc">Guia completo para fazer 1K por dia com Dropshipping. O começo certo para quem está começando do zero.</div>
+          <div class="j-price">R$27<sub>,00</sub></div>
+          <a class="j-cta jc-blue" href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid" target="_blank" rel="noopener">
+            Garantir vaga <i class="fas fa-arrow-right" style="font-size:11px"></i>
           </a>
         </div>
 
-        <!-- P2: Mentoria Marca Milionária -->
-        <div class="product-card featured reveal" style="transition-delay:0.10s">
-          <div class="featured-tag">⭐ Destaque</div>
-          <div class="prod-icon" style="background:rgba(245,158,11,.12);font-size:24px;">👑</div>
-          <div class="prod-title">Mentoria Marca Milionária</div>
-          <div class="prod-desc">
-            Do zero aos 100.000/mês sem estoque. O método completo em grupo com suporte direto e comunidade ativa.
-          </div>
-          <a class="prod-cta cta-gold"
-             href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/"
-             target="_blank" rel="noopener">
-            Fazer inscrição <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+        <div class="j-card featured rev" style="transition-delay:.10s">
+          <div class="j-card-top jt-gold"></div>
+          <div class="feat-badge">⭐ Destaque</div>
+          <div class="j-icon ji-gold">👑</div>
+          <div class="j-title">Mentoria Marca Milionária</div>
+          <div class="j-desc">Do zero aos 100.000/mês sem estoque. Método completo em grupo com suporte e comunidade ativa.</div>
+          <a class="j-cta jc-gold" href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/" target="_blank" rel="noopener">
+            Fazer inscrição <i class="fas fa-arrow-right" style="font-size:11px"></i>
           </a>
         </div>
 
-        <!-- P3: Mentoria Individual -->
-        <div class="product-card reveal" style="transition-delay:0.15s">
-          <div class="prod-icon" style="background:rgba(139,92,246,.12);font-size:24px;">💎</div>
-          <div class="prod-title">Mentoria Individual</div>
-          <div class="prod-desc">
-            Suporte 1-a-1 direto com o Carlos. Para quem quer construir uma marca que fatura 70K a 200K por mês com foco total.
-            <br/><br/><strong style="color:#c4b5fd;">🔒 Vagas Limitadas</strong>
-          </div>
-          <a class="prod-cta cta-purple"
-             href="https://carloseduardooficial.com.br/carlos-mentoria-individual/"
-             target="_blank" rel="noopener">
-            Quero aplicar <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+        <div class="j-card rev" style="transition-delay:.15s">
+          <div class="j-card-top jt-purple"></div>
+          <div class="j-icon ji-purple">💎</div>
+          <div class="j-title">Mentoria Individual</div>
+          <div class="j-desc">Suporte 1-a-1 direto com o Carlos. Para construir uma marca que fatura 70K a 200K por mês.</div>
+          <div style="font-size:13px;color:var(--purplel);font-weight:600">🔒 Vagas Limitadas</div>
+          <a class="j-cta jc-purple" href="https://carloseduardooficial.com.br/carlos-mentoria-individual/" target="_blank" rel="noopener">
+            Quero aplicar <i class="fas fa-arrow-right" style="font-size:11px"></i>
           </a>
         </div>
 
-        <!-- P4: ZaveleMídia -->
-        <div class="product-card reveal" style="transition-delay:0.20s">
-          <div class="prod-icon" style="background:rgba(6,182,212,.12);font-size:24px;">📊</div>
-          <div class="prod-title">ZaveleMídia</div>
-          <div class="prod-desc">
-            Gestão de Tráfego e Marketing Digital para escalar sua marca. Conte com nossa agência especializada em e-commerce.
-          </div>
-          <a class="prod-cta cta-teal"
-             href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid"
-             target="_blank" rel="noopener">
-            Contratar agência <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+        <div class="j-card rev" style="transition-delay:.20s">
+          <div class="j-card-top jt-teal"></div>
+          <div class="j-icon ji-teal">📊</div>
+          <div class="j-title">ZaveleMídia</div>
+          <div class="j-desc">Gestão de Tráfego e Marketing Digital. Nossa agência especializada escala marcas de e-commerce.</div>
+          <a class="j-cta jc-teal" href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid" target="_blank" rel="noopener">
+            Contratar agência <i class="fas fa-arrow-right" style="font-size:11px"></i>
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ── SOBRE ── -->
-  <section id="sobre">
-    <div class="section-inner">
+  <section class="section" id="sobre">
+    <div class="si">
+      <div class="rev">
+        <div class="s-eyebrow">Sobre</div>
+        <h2 class="s-h2">Quem é o Carlos Zavele?</h2>
+        <p class="s-sub">Empreendedor digital, especialista em Dropshipping sem estoque e fundador da ZaveleMídia.</p>
+      </div>
 
-      <div class="reveal">
-        <div class="section-tag"><i class="fas fa-user"></i> Sobre</div>
-        <h2 class="section-h2">Quem é o Carlos Zavele?</h2>
-        <p class="section-sub">
-          Empreendedor digital, especialista em Dropshipping sem estoque e fundador da ZaveleMídia — agência de gestão de tráfego.
-        </p>
-
-        <ul class="about-list">
+      <div class="sobre-grid">
+        <ul class="about-list rev">
           <li>
-            <div class="about-check"><i class="fas fa-check"></i></div>
-            <p><strong>Dropshipping sem Estoque</strong> — modelo de negócio que permite faturar sem precisar gerenciar produtos físicos.</p>
+            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
+            <p class="al-text"><strong>Dropshipping sem Estoque</strong> — modelo que permite faturar alto sem gerenciar produtos físicos.</p>
           </li>
           <li>
-            <div class="about-check"><i class="fas fa-check"></i></div>
-            <p><strong>Mais de 500 alunos formados</strong> — comunidade ativa de empreendedores aplicando o método.</p>
+            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
+            <p class="al-text"><strong>+500 alunos formados</strong> — comunidade ativa de empreendedores aplicando o método.</p>
           </li>
           <li>
-            <div class="about-check"><i class="fas fa-check"></i></div>
-            <p><strong>Fundador da ZaveleMídia</strong> — agência especializada em gestão de tráfego e marketing digital.</p>
+            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
+            <p class="al-text"><strong>Fundador da ZaveleMídia</strong> — agência especializada em gestão de tráfego e marketing digital.</p>
           </li>
           <li>
-            <div class="about-check"><i class="fas fa-check"></i></div>
-            <p><strong>Resultados comprovados</strong> — alunos faturando de 70K a 200K por mês com o método aplicado.</p>
+            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
+            <p class="al-text"><strong>Resultados comprovados</strong> — alunos faturando de 70K a 200K por mês com o método aplicado.</p>
           </li>
         </ul>
-      </div>
 
-      <div class="about-visual reveal" style="transition-delay:0.1s">
-        <div class="about-stat-row">
-          <div class="about-stat">
-            <div class="about-stat-val" style="color:var(--blue-l)">+100K</div>
-            <div class="about-stat-lbl">Seguidores no Instagram</div>
+        <div class="sobre-visual rev" style="transition-delay:.1s">
+          <div class="sv-grid">
+            <div class="sv-item">
+              <div class="sv-val" style="color:var(--bluel)">+100K</div>
+              <div class="sv-lbl">Seguidores no Instagram</div>
+            </div>
+            <div class="sv-item">
+              <div class="sv-val" style="color:var(--goldl)">+500</div>
+              <div class="sv-lbl">Alunos treinados</div>
+            </div>
+            <div class="sv-item">
+              <div class="sv-val" style="color:var(--purplel)">200K</div>
+              <div class="sv-lbl">Faturamento/mês alcançado</div>
+            </div>
+            <div class="sv-item">
+              <div class="sv-val" style="color:var(--teall)">4</div>
+              <div class="sv-lbl">Produtos disponíveis</div>
+            </div>
           </div>
-          <div class="about-stat">
-            <div class="about-stat-val" style="color:var(--gold-l)">+500</div>
-            <div class="about-stat-lbl">Alunos treinados</div>
-          </div>
+          <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener"
+             class="btn-primary" style="justify-content:center">
+            <i class="fab fa-instagram"></i> Seguir no Instagram
+          </a>
         </div>
-        <div class="about-stat-row">
-          <div class="about-stat">
-            <div class="about-stat-val" style="color:var(--purple-l)">200K</div>
-            <div class="about-stat-lbl">Faturamento/mês alcançado</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-val" style="color:var(--teal-l)">4</div>
-            <div class="about-stat-lbl">Produtos disponíveis</div>
-          </div>
-        </div>
-        <a href="https://instagram.com/carloseduardooficial"
-           target="_blank" rel="noopener"
-           class="btn-primary" style="justify-content:center;">
-          <i class="fab fa-instagram"></i>
-          Seguir no Instagram
-        </a>
       </div>
-
     </div>
   </section>
 
   <!-- ── CTA BAND ── -->
   <div class="cta-band">
-    <div class="section-inner">
-      <div class="section-tag" style="color:var(--gold-l)">🔥 Comece Agora</div>
-      <h2 class="section-h2">Pronto para construir sua<br/><span style="background:linear-gradient(135deg,var(--gold-l),var(--blue-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Marca Milionária?</span></h2>
-      <p class="section-sub">Escolha o produto certo para o seu momento e dê o próximo passo na sua jornada.</p>
-      <div class="cta-band-actions">
+    <div class="si">
+      <div class="s-eyebrow" style="color:var(--goldl)">Comece Agora</div>
+      <h2 class="s-h2">
+        Pronto para sua<br/>
+        <span style="background:linear-gradient(135deg,var(--goldl),var(--bluel));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+          Marca Milionária?
+        </span>
+      </h2>
+      <p class="s-sub" style="text-align:center">
+        Escolha o produto certo para o seu momento e dê o próximo passo agora.
+      </p>
+      <div class="cta-band-btns">
         <a href="/links/" class="btn-primary">
-          <i class="fas fa-rocket"></i>
-          Ver Todos os Links
+          <i class="fas fa-rocket" style="font-size:13px"></i> Ver Todos os Links
         </a>
-        <a href="https://instagram.com/carloseduardooficial"
-           target="_blank" rel="noopener"
-           class="btn-secondary">
-          <i class="fab fa-instagram"></i>
-          Instagram
+        <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="btn-ghost">
+          <i class="fab fa-instagram"></i> Instagram
         </a>
       </div>
     </div>
@@ -900,46 +549,37 @@
 
   <!-- ── FOOTER ── -->
   <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">Carlos Zavele</div>
-      <ul class="footer-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="/links/">Links</a></li>
-      </ul>
-      <div class="footer-social">
-        <a href="https://instagram.com/carloseduardooficial"
-           target="_blank" rel="noopener"
-           class="social-btn" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/5500000000000"
-           target="_blank" rel="noopener"
-           class="social-btn" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
+    <div class="ft">
+      <div class="ft-top">
+        <div class="ft-logo">Carlos Zavele</div>
+        <ul class="ft-nav">
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="/links/">Links</a></li>
+        </ul>
+        <div class="ft-socials">
+          <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="soc" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me" target="_blank" rel="noopener" class="soc" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </div>
-      <div class="footer-copy">
-        © 2025 Carlos Zavele · Todos os direitos reservados
-      </div>
+      <div class="ft-copy">© 2025 Carlos Zavele · Todos os direitos reservados</div>
     </div>
   </footer>
 
-  <!-- ── Scroll reveal ── -->
   <script>
-    (function () {
-      const els = document.querySelectorAll('.reveal');
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            io.unobserve(e.target);
-          }
+    (function(){
+      var els=document.querySelectorAll('.rev');
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
         });
-      }, { threshold: 0.12 });
-      els.forEach(el => io.observe(el));
+      },{threshold:.1});
+      els.forEach(function(el){io.observe(el)});
     })();
   </script>
-
 </body>
 </html>

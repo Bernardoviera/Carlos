@@ -1,547 +1,559 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Carlos Zavele – Links úteis sobre dropshipping, mentoria e marketing digital" />
-  <meta property="og:title" content="Carlos Zavele | Links" />
-  <meta property="og:description" content="Acesse os melhores recursos para construir sua marca milionária sem estoque." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Carlos Zavele – Links úteis: Dropshipping, Mentoria e Marketing Digital"/>
   <title>Carlos Zavele | Links</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
 
   <style>
-    /* ─── RESET & BASE ─────────────────────────────────────── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  /* ═══ RESET ═══════════════════════════════════════════════════ */
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:       #03030b;
+    --surface:  #0a0a15;
+    --card:     #0d0d1c;
+    --border:   rgba(255,255,255,0.055);
+    --text:     #f0f0fa;
+    --muted:    #6b6b90;
 
-    :root {
-      --bg:           #07070f;
-      --bg2:          #0d0d1a;
-      --card:         #101020;
-      --border:       rgba(255,255,255,0.06);
-      --border-hover: rgba(255,255,255,0.14);
-      --text:         #eeeeff;
-      --muted:        #7777aa;
+    --gold:   #f5a623;
+    --goldl:  #ffd580;
+    --blue:   #3b7ff5;
+    --bluel:  #7eb8ff;
+    --purple: #9b6bfa;
+    --purplel:#c4a7ff;
+    --teal:   #0fc4d4;
+    --teall:  #6ee7f0;
+    --pink:   #f43f8e;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0 0 100px;
+    overflow-x:hidden;
+    position:relative;
+  }
+  a{text-decoration:none;color:inherit}
 
-      --blue:    #3b82f6;
-      --blue-l:  #93c5fd;
-      --gold:    #f59e0b;
-      --gold-l:  #fde68a;
-      --purple:  #8b5cf6;
-      --purple-l:#c4b5fd;
-      --teal:    #06b6d4;
-      --teal-l:  #67e8f9;
-      --pink:    #ec4899;
-    }
+  /* ═══ ANIMATED ORBS ════════════════════════════════════════════ */
+  .orbs{
+    position:fixed;inset:0;
+    pointer-events:none;z-index:0;
+    overflow:hidden;
+  }
+  .orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    will-change:transform;
+  }
+  .orb1{
+    width:70vw;height:55vw;max-width:700px;max-height:560px;
+    top:-15%;left:-20%;
+    background:radial-gradient(ellipse,rgba(59,127,245,.18) 0%,transparent 70%);
+    animation:drift1 14s ease-in-out infinite;
+  }
+  .orb2{
+    width:55vw;height:45vw;max-width:580px;max-height:480px;
+    bottom:-10%;right:-15%;
+    background:radial-gradient(ellipse,rgba(155,107,250,.14) 0%,transparent 70%);
+    animation:drift2 18s ease-in-out infinite;
+  }
+  .orb3{
+    width:40vw;height:35vw;max-width:420px;max-height:380px;
+    top:45%;left:30%;
+    background:radial-gradient(ellipse,rgba(245,166,35,.09) 0%,transparent 70%);
+    animation:drift3 22s ease-in-out infinite;
+  }
+  @keyframes drift1{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%     {transform:translate(40px,-50px) scale(1.08)}
+  }
+  @keyframes drift2{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%     {transform:translate(-50px,30px) scale(1.06)}
+  }
+  @keyframes drift3{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%     {transform:translate(30px,40px) scale(0.94)}
+  }
 
-    html { scroll-behavior: smooth; }
+  /* grain overlay */
+  .grain{
+    position:fixed;inset:0;
+    pointer-events:none;z-index:1;
+    opacity:.03;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:200px 200px;
+  }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 56px 16px 80px;
-      position: relative;
-      overflow-x: hidden;
-    }
+  /* ═══ MAIN WRAPPER ═════════════════════════════════════════════ */
+  .wrap{
+    position:relative;z-index:2;
+    width:100%;max-width:520px;
+    padding:0 18px;
+    display:flex;flex-direction:column;align-items:center;
+    gap:0;
+  }
 
-    /* Ambient glow no topo */
-    body::before {
-      content: '';
-      position: fixed;
-      top: -20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 900px;
-      height: 500px;
-      background: radial-gradient(ellipse, rgba(59,130,246,0.09) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
+  /* ═══ TOP BAR ══════════════════════════════════════════════════ */
+  .topbar{
+    width:100%;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:28px 0 0;
+    margin-bottom:48px;
+  }
+  .monogram{
+    font-family:'Syne',sans-serif;
+    font-size:15px;font-weight:800;
+    letter-spacing:3px;text-transform:uppercase;
+    color:rgba(255,255,255,.35);
+  }
+  .ig-follow{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:99px;
+    font-size:12px;font-weight:600;
+    color:var(--muted);
+    transition:border-color .2s,color .2s,background .2s;
+  }
+  .ig-follow:hover{border-color:rgba(255,255,255,.2);color:var(--text);background:rgba(255,255,255,.04)}
+  .ig-follow i{color:var(--pink)}
 
-    /* ─── CONTAINER ────────────────────────────────────────── */
-    .container {
-      width: 100%;
-      max-width: 560px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      position: relative;
-      z-index: 1;
-    }
+  /* ═══ HERO ═════════════════════════════════════════════════════ */
+  .hero{
+    width:100%;
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:0;
+    margin-bottom:52px;
+  }
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:700;
+    letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:20px;
+  }
+  .hero-eyebrow::before{
+    content:'';
+    display:block;width:22px;height:1.5px;
+    background:var(--gold);
+  }
+  .hero-name{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(52px,14vw,80px);
+    font-weight:800;
+    line-height:.95;
+    letter-spacing:-2px;
+    margin-bottom:6px;
+    background:linear-gradient(170deg,#ffffff 30%,rgba(255,255,255,.45) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  .hero-underline{
+    width:56px;height:3px;
+    background:linear-gradient(90deg,var(--gold),var(--blue));
+    border-radius:99px;
+    margin:14px 0 22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-underline::after{
+    content:'';
+    position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);
+    animation:shimmer 2.4s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%  {transform:translateX(-100%)}
+    100%{transform:translateX(300%)}
+  }
+  .hero-bio{
+    font-size:15px;line-height:1.65;
+    color:var(--muted);
+    max-width:380px;
+    margin-bottom:32px;
+  }
+  .hero-bio strong{color:var(--goldl)}
 
-    /* ─── PROFILE ──────────────────────────────────────────── */
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding-bottom: 12px;
-      text-align: center;
-    }
+  /* stats */
+  .stats{
+    display:flex;gap:10px;flex-wrap:wrap;
+  }
+  .stat{
+    display:flex;flex-direction:column;align-items:flex-start;
+    padding:12px 18px;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border);
+    border-radius:14px;
+    transition:border-color .2s;
+  }
+  .stat:hover{border-color:rgba(255,255,255,.12)}
+  .stat-val{
+    font-size:17px;font-weight:800;letter-spacing:-.4px;
+    line-height:1;
+  }
+  .stat-lbl{font-size:10.5px;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.6px}
 
-    .avatar-wrap {
-      position: relative;
-      width: 92px;
-      height: 92px;
-      flex-shrink: 0;
-    }
+  /* ═══ SECTION DIVIDER ══════════════════════════════════════════ */
+  .divider{
+    width:100%;
+    display:flex;align-items:center;gap:14px;
+    margin-bottom:22px;
+  }
+  .divider-line{flex:1;height:1px;background:var(--border)}
+  .divider-label{
+    font-size:10px;font-weight:700;
+    letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--muted);
+    white-space:nowrap;
+  }
 
-    .avatar-ring {
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6);
-      animation: rotatering 3s linear infinite;
-    }
+  /* ═══ OFFER CARDS ══════════════════════════════════════════════ */
+  .cards{
+    width:100%;
+    display:flex;flex-direction:column;
+    gap:14px;
+    margin-bottom:28px;
+  }
 
-    @keyframes rotatering {
-      to { transform: rotate(360deg); }
-    }
+  .card{
+    width:100%;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    overflow:hidden;
+    cursor:pointer;
+    text-decoration:none;
+    color:inherit;
+    display:flex;flex-direction:column;
+    position:relative;
+    transition:transform .25s cubic-bezier(.4,0,.2,1),
+                border-color .25s ease,
+                box-shadow .25s ease;
+    opacity:0;
+    animation:riseIn .5s cubic-bezier(.4,0,.2,1) forwards;
+  }
+  .card:nth-child(1){animation-delay:.06s}
+  .card:nth-child(2){animation-delay:.14s}
+  .card:nth-child(3){animation-delay:.22s}
+  .card:nth-child(4){animation-delay:.30s}
 
-    .avatar-inner {
-      position: absolute;
-      inset: 3px;
-      border-radius: 50%;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      z-index: 1;
-    }
+  @keyframes riseIn{
+    from{opacity:0;transform:translateY(24px)}
+    to  {opacity:1;transform:translateY(0)}
+  }
 
-    .avatar-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .card:hover{transform:translateY(-4px)}
+  .card:active{transform:translateY(-2px) scale(.99)}
 
-    .avatar-initials {
-      font-size: 30px;
-      font-weight: 900;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -1px;
-    }
+  /* Colored top strip */
+  .card-strip{
+    height:3px;
+    width:100%;
+    flex-shrink:0;
+  }
+  .strip-blue   {background:linear-gradient(90deg,var(--blue),var(--bluel))}
+  .strip-gold   {background:linear-gradient(90deg,var(--gold),var(--goldl))}
+  .strip-purple {background:linear-gradient(90deg,var(--purple),var(--purplel))}
+  .strip-teal   {background:linear-gradient(90deg,var(--teal),var(--teall))}
 
-    .profile-name {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-      line-height: 1;
-      background: linear-gradient(160deg, #ffffff 0%, #aaaacc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+  .card-blue:hover  {border-color:rgba(59,127,245,.3);box-shadow:0 16px 48px rgba(59,127,245,.18)}
+  .card-gold:hover  {border-color:rgba(245,166,35,.3);box-shadow:0 16px 48px rgba(245,166,35,.18)}
+  .card-purple:hover{border-color:rgba(155,107,250,.3);box-shadow:0 16px 48px rgba(155,107,250,.18)}
+  .card-teal:hover  {border-color:rgba(15,196,212,.3);box-shadow:0 16px 48px rgba(15,196,212,.18)}
 
-    .profile-handle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--muted);
-    }
+  /* Card body */
+  .card-body{
+    padding:22px 22px 20px;
+    display:flex;flex-direction:column;
+    gap:14px;
+    flex:1;
+  }
 
-    .profile-handle i { color: var(--pink); font-size: 14px; }
+  .card-head{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:12px;
+  }
 
-    .profile-bio {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.65;
-      max-width: 380px;
-    }
+  .card-icon-wrap{
+    width:46px;height:46px;
+    border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+    flex-shrink:0;
+  }
+  .iw-blue  {background:rgba(59,127,245,.12)}
+  .iw-gold  {background:rgba(245,166,35,.12)}
+  .iw-purple{background:rgba(155,107,250,.12)}
+  .iw-teal  {background:rgba(15,196,212,.12)}
 
-    /* ─── STATS BAR ────────────────────────────────────────── */
-    .stats {
-      display: flex;
-      gap: 0;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      width: 100%;
-      overflow: hidden;
-    }
+  .card-badge{
+    display:inline-flex;align-items:center;gap:5px;
+    padding:5px 11px;
+    border-radius:99px;
+    font-size:10px;font-weight:700;
+    letter-spacing:.5px;text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .b-blue  {background:rgba(59,127,245,.12);color:var(--bluel)}
+  .b-gold  {background:rgba(245,166,35,.12);color:var(--goldl)}
+  .b-purple{background:rgba(155,107,250,.12);color:var(--purplel)}
+  .b-teal  {background:rgba(15,196,212,.12);color:var(--teall)}
 
-    .stat {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 16px 12px;
-      gap: 3px;
-      position: relative;
-    }
+  .card-title{
+    font-size:18px;font-weight:800;
+    line-height:1.2;letter-spacing:-.3px;
+    color:var(--text);
+  }
+  .card-desc{
+    font-size:13.5px;line-height:1.6;
+    color:var(--muted);
+  }
+  .card-price{
+    font-size:22px;font-weight:900;
+    letter-spacing:-.5px;
+    color:var(--goldl);
+    line-height:1;
+  }
+  .card-price span{font-size:13px;font-weight:500;color:var(--muted)}
 
-    .stat + .stat::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 20%;
-      height: 60%;
-      width: 1px;
-      background: var(--border);
-    }
+  /* CTA button inside card */
+  .card-cta{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    width:100%;
+    padding:14px 20px;
+    border-radius:13px;
+    font-size:14px;font-weight:700;
+    letter-spacing:.1px;
+    transition:opacity .2s,transform .2s;
+    cursor:pointer;
+  }
+  .card-cta:hover{opacity:.88;transform:translateX(2px)}
+  .cta-blue  {background:rgba(59,127,245,.15);color:var(--bluel)}
+  .cta-gold  {background:rgba(245,166,35,.15);color:var(--goldl)}
+  .cta-purple{background:rgba(155,107,250,.15);color:var(--purplel)}
+  .cta-teal  {background:rgba(15,196,212,.15);color:var(--teall)}
 
-    .stat-value {
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--text);
-    }
+  /* ═══ INSTAGRAM BUTTON ═════════════════════════════════════════ */
+  .ig-btn{
+    width:100%;
+    display:flex;align-items:center;justify-content:center;gap:11px;
+    padding:18px 24px;
+    background:linear-gradient(110deg,#833ab4 0%,#e1306c 45%,#f77737 100%);
+    border-radius:18px;
+    font-size:15px;font-weight:800;
+    color:#fff;
+    letter-spacing:.2px;
+    cursor:pointer;
+    transition:transform .22s ease,box-shadow .22s ease,opacity .22s ease;
+    opacity:0;
+    animation:riseIn .5s cubic-bezier(.4,0,.2,1) .38s forwards;
+  }
+  .ig-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 48px rgba(236,72,153,.35);
+    opacity:.92;
+  }
+  .ig-btn:active{transform:translateY(-1px) scale(.99)}
+  .ig-btn i{font-size:18px}
 
-    .stat-label {
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--muted);
-    }
+  /* ═══ FOOTER ═══════════════════════════════════════════════════ */
+  .footer{
+    margin-top:48px;
+    font-size:11.5px;
+    color:rgba(255,255,255,.12);
+    text-align:center;
+    line-height:2;
+  }
+  .footer a{color:rgba(255,255,255,.2);transition:color .2s}
+  .footer a:hover{color:rgba(255,255,255,.45)}
 
-    /* ─── SECTION LABEL ────────────────────────────────────── */
-    .section-label {
-      align-self: flex-start;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding: 8px 2px 2px;
-    }
-
-    /* ─── LINK CARD ────────────────────────────────────────── */
-    .link-card {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px 20px 20px 22px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.22s cubic-bezier(0.4,0,0.2,1),
-                  border-color 0.22s ease,
-                  box-shadow 0.22s ease;
-
-      /* Entrada animada */
-      opacity: 0;
-      animation: slideUp 0.45s cubic-bezier(0.4,0,0.2,1) forwards;
-    }
-
-    .link-card:nth-child(1) { animation-delay: 0.08s; }
-    .link-card:nth-child(2) { animation-delay: 0.16s; }
-    .link-card:nth-child(3) { animation-delay: 0.24s; }
-    .link-card:nth-child(4) { animation-delay: 0.32s; }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Borda colorida lateral */
-    .link-card::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 20%;
-      height: 60%;
-      width: 3px;
-      border-radius: 0 3px 3px 0;
-      transition: height 0.22s ease, top 0.22s ease;
-    }
-
-    .link-card:hover::after { top: 8%; height: 84%; }
-
-    /* Hover geral */
-    .link-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-hover);
-    }
-
-    .link-card:active { transform: translateY(-1px) scale(0.99); }
-
-    /* ── Variantes de cor ── */
-    .card-blue::after  { background: var(--blue); }
-    .card-blue:hover   { box-shadow: 0 10px 36px rgba(59,130,246,.18); border-color: rgba(59,130,246,.28); }
-
-    .card-gold::after  { background: var(--gold); }
-    .card-gold:hover   { box-shadow: 0 10px 36px rgba(245,158,11,.18); border-color: rgba(245,158,11,.28); }
-
-    .card-purple::after { background: var(--purple); }
-    .card-purple:hover  { box-shadow: 0 10px 36px rgba(139,92,246,.18); border-color: rgba(139,92,246,.28); }
-
-    .card-teal::after  { background: var(--teal); }
-    .card-teal:hover   { box-shadow: 0 10px 36px rgba(6,182,212,.18); border-color: rgba(6,182,212,.28); }
-
-    /* Ícone */
-    .card-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
-      transition: transform 0.22s ease;
-    }
-
-    .link-card:hover .card-icon { transform: scale(1.08); }
-
-    .icon-blue   { background: rgba(59,130,246,.12);  color: var(--blue-l); }
-    .icon-gold   { background: rgba(245,158,11,.12);  color: var(--gold-l); }
-    .icon-purple { background: rgba(139,92,246,.12);  color: var(--purple-l); }
-    .icon-teal   { background: rgba(6,182,212,.12);   color: var(--teal-l); }
-
-    /* Conteúdo */
-    .card-body { flex: 1; min-width: 0; }
-
-    .card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.7px;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 6px;
-      margin-bottom: 6px;
-    }
-
-    .badge-blue   { background: rgba(59,130,246,.14);  color: var(--blue-l); }
-    .badge-gold   { background: rgba(245,158,11,.14);  color: var(--gold-l); }
-    .badge-purple { background: rgba(139,92,246,.14);  color: var(--purple-l); }
-    .badge-teal   { background: rgba(6,182,212,.14);   color: var(--teal-l); }
-
-    .card-title {
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--text);
-      line-height: 1.25;
-      margin-bottom: 4px;
-    }
-
-    .card-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .card-price {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--gold-l);
-      margin-top: 6px;
-    }
-
-    /* Seta */
-    .card-arrow {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      flex-shrink: 0;
-      transition: transform 0.22s ease;
-    }
-
-    .link-card:hover .card-arrow { transform: translateX(4px); }
-
-    .arrow-blue   { background: rgba(59,130,246,.1);  color: var(--blue-l); }
-    .arrow-gold   { background: rgba(245,158,11,.1);  color: var(--gold-l); }
-    .arrow-purple { background: rgba(139,92,246,.1);  color: var(--purple-l); }
-    .arrow-teal   { background: rgba(6,182,212,.1);   color: var(--teal-l); }
-
-    /* ─── INSTAGRAM BTN ────────────────────────────────────── */
-    .ig-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 17px 24px;
-      background: linear-gradient(120deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-      border-radius: 20px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
-      margin-top: 4px;
-      opacity: 0;
-      animation: slideUp 0.45s cubic-bezier(0.4,0,0.2,1) 0.42s forwards;
-    }
-
-    .ig-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 36px rgba(236,72,153,.35);
-      opacity: 0.94;
-    }
-
-    .ig-btn:active { transform: translateY(-1px) scale(0.99); }
-
-    .ig-btn i { font-size: 18px; }
-
-    /* ─── FOOTER ───────────────────────────────────────────── */
-    .footer {
-      margin-top: 36px;
-      font-size: 11.5px;
-      color: rgba(255,255,255,.13);
-      text-align: center;
-      line-height: 1.8;
-    }
-
-    .footer a { color: rgba(255,255,255,.2); text-decoration: none; }
-    .footer a:hover { color: rgba(255,255,255,.4); }
-
-    /* ─── RESPONSIVE ───────────────────────────────────────── */
-    @media (max-width: 480px) {
-      body { padding: 36px 12px 60px; }
-      .profile-name { font-size: 24px; }
-      .link-card { padding: 16px 16px 16px 18px; gap: 12px; }
-      .card-icon { width: 44px; height: 44px; font-size: 19px; border-radius: 12px; }
-      .card-title { font-size: 15px; }
-      .stat-value { font-size: 17px; }
-    }
+  /* ═══ RESPONSIVE ════════════════════════════════════════════════ */
+  @media(max-width:480px){
+    .wrap{padding:0 14px}
+    .hero-name{font-size:clamp(44px,13vw,60px)}
+    .card-body{padding:18px 18px 16px}
+    .card-title{font-size:16px}
+  }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <!-- animated bg -->
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <!-- ── Perfil ── -->
-  <div class="profile">
-    <div class="avatar-wrap">
-      <div class="avatar-ring"></div>
-      <div class="avatar-inner">
-        <!--
-          Troque o src abaixo pela URL da foto real do Carlos.
-          Exemplo: <img src="https://seusite.com/foto.jpg" alt="Carlos Zavele" />
-          Enquanto isso, usamos as iniciais como placeholder.
-        -->
-        <span class="avatar-initials">CZ</span>
+  <div class="wrap">
+
+    <!-- ── TOP BAR ── -->
+    <div class="topbar">
+      <span class="monogram">C · Z</span>
+      <a class="ig-follow"
+         href="https://instagram.com/carloseduardooficial"
+         target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i> Seguir
+      </a>
+    </div>
+
+    <!-- ── HERO ── -->
+    <div class="hero">
+      <div class="hero-eyebrow">Links Úteis</div>
+      <div class="hero-name">Carlos<br/>Zavele</div>
+      <div class="hero-underline"></div>
+      <p class="hero-bio">
+        Especialista em Dropshipping sem Estoque.<br/>
+        Ajudo empreendedores a construírem marcas que
+        faturam <strong>70K a 200K por mês</strong>.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-val" style="color:var(--bluel)">+100K</span>
+          <span class="stat-lbl">Seguidores</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val" style="color:var(--goldl)">+500</span>
+          <span class="stat-lbl">Alunos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val" style="color:var(--purplel)">200K/mês</span>
+          <span class="stat-lbl">Faturamento</span>
+        </div>
       </div>
     </div>
 
-    <div class="profile-name">Carlos Zavele</div>
+    <!-- ── DIVIDER ── -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <span class="divider-label">Escolha seu próximo passo</span>
+      <div class="divider-line"></div>
+    </div>
 
-    <div class="profile-handle">
+    <!-- ── CARDS ── -->
+    <div class="cards">
+
+      <!-- 01 · Guia Dropshipping -->
+      <a class="card card-blue"
+         href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid"
+         target="_blank" rel="noopener noreferrer">
+        <div class="card-strip strip-blue"></div>
+        <div class="card-body">
+          <div class="card-head">
+            <div class="card-icon-wrap iw-blue">🚀</div>
+            <span class="card-badge b-blue">⚡ Mais Vendido</span>
+          </div>
+          <div>
+            <div class="card-title">Guia Destravar das Vendas</div>
+            <div class="card-desc" style="margin-top:6px">
+              Guia completo para fazer 1K por dia com Dropshipping — do zero ao primeiro pedido.
+            </div>
+          </div>
+          <div class="card-price">R$27<span>,00</span></div>
+          <span class="card-cta cta-blue">
+            Garantir minha vaga <i class="fas fa-arrow-right" style="font-size:12px"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- 02 · Mentoria Marca Milionária -->
+      <a class="card card-gold"
+         href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/"
+         target="_blank" rel="noopener noreferrer">
+        <div class="card-strip strip-gold"></div>
+        <div class="card-body">
+          <div class="card-head">
+            <div class="card-icon-wrap iw-gold">👑</div>
+            <span class="card-badge b-gold">🏆 Premium</span>
+          </div>
+          <div>
+            <div class="card-title">Mentoria Marca Milionária</div>
+            <div class="card-desc" style="margin-top:6px">
+              Descubra como ir do zero aos <strong style="color:var(--goldl)">100.000/mês</strong> sem estoque — método comprovado em grupo.
+            </div>
+          </div>
+          <span class="card-cta cta-gold">
+            Fazer inscrição <i class="fas fa-arrow-right" style="font-size:12px"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- 03 · Mentoria Individual -->
+      <a class="card card-purple"
+         href="https://carloseduardooficial.com.br/carlos-mentoria-individual/"
+         target="_blank" rel="noopener noreferrer">
+        <div class="card-strip strip-purple"></div>
+        <div class="card-body">
+          <div class="card-head">
+            <div class="card-icon-wrap iw-purple">💎</div>
+            <span class="card-badge b-purple">🔒 Vagas Limitadas</span>
+          </div>
+          <div>
+            <div class="card-title">Mentoria Individual</div>
+            <div class="card-desc" style="margin-top:6px">
+              Suporte 1-a-1 direto com o Carlos para construir uma marca de
+              <strong style="color:var(--purplel)">70K a 200K/mês</strong>.
+              Aplique enquanto há vagas.
+            </div>
+          </div>
+          <span class="card-cta cta-purple">
+            Quero aplicar <i class="fas fa-arrow-right" style="font-size:12px"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- 04 · ZaveleMídia -->
+      <a class="card card-teal"
+         href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid"
+         target="_blank" rel="noopener noreferrer">
+        <div class="card-strip strip-teal"></div>
+        <div class="card-body">
+          <div class="card-head">
+            <div class="card-icon-wrap iw-teal">📊</div>
+            <span class="card-badge b-teal">🎯 Agência</span>
+          </div>
+          <div>
+            <div class="card-title">ZaveleMídia</div>
+            <div class="card-desc" style="margin-top:6px">
+              Gestão de Tráfego e Marketing Digital para escalar sua marca. Contrate nossa agência especializada.
+            </div>
+          </div>
+          <span class="card-cta cta-teal">
+            Contratar serviços <i class="fas fa-arrow-right" style="font-size:12px"></i>
+          </span>
+        </div>
+      </a>
+
+    </div><!-- /cards -->
+
+    <!-- ── INSTAGRAM ── -->
+    <a class="ig-btn"
+       href="https://instagram.com/carloseduardooficial"
+       target="_blank" rel="noopener noreferrer">
       <i class="fab fa-instagram"></i>
-      @carloseduardooficial
-    </div>
+      Voltar para o Instagram
+    </a>
 
-    <p class="profile-bio">
-      Especialista em Dropshipping sem Estoque &bull; Ajudo empreendedores a construírem marcas que faturam de <strong style="color:#fde68a">70K a 200K/mês</strong>
-    </p>
-  </div>
+    <footer class="footer">
+      © 2025 Carlos Zavele · Todos os direitos reservados<br/>
+      <a href="/">carloseduardooficial.com.br</a>
+    </footer>
 
-  <!-- ── Stats ── -->
-  <div class="stats">
-    <div class="stat">
-      <span class="stat-value">+100K</span>
-      <span class="stat-label">Seguidores</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">+500</span>
-      <span class="stat-label">Alunos</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">200K/mês</span>
-      <span class="stat-label">Faturamento</span>
-    </div>
-  </div>
-
-  <div class="section-label">🔥 Links Úteis</div>
-
-  <!-- ── Card 1: Guia Dropshipping ── -->
-  <a class="link-card card-blue"
-     href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid"
-     target="_blank" rel="noopener noreferrer">
-    <div class="card-icon icon-blue">🚀</div>
-    <div class="card-body">
-      <div class="card-badge badge-blue">⚡ Mais Vendido</div>
-      <div class="card-title">Guia Destravar das Vendas</div>
-      <div class="card-desc">Guia completo para fazer 1K por dia com Dropshipping</div>
-      <div class="card-price">Apenas R$27,00</div>
-    </div>
-    <div class="card-arrow arrow-blue"><i class="fas fa-arrow-right"></i></div>
-  </a>
-
-  <!-- ── Card 2: Mentoria Marca Milionária ── -->
-  <a class="link-card card-gold"
-     href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/"
-     target="_blank" rel="noopener noreferrer">
-    <div class="card-icon icon-gold">👑</div>
-    <div class="card-body">
-      <div class="card-badge badge-gold">🏆 Premium</div>
-      <div class="card-title">Mentoria Marca Milionária</div>
-      <div class="card-desc">Do zero aos 100.000/mês sem estoque — método comprovado</div>
-    </div>
-    <div class="card-arrow arrow-gold"><i class="fas fa-arrow-right"></i></div>
-  </a>
-
-  <!-- ── Card 3: Mentoria Individual ── -->
-  <a class="link-card card-purple"
-     href="https://carloseduardooficial.com.br/carlos-mentoria-individual/"
-     target="_blank" rel="noopener noreferrer">
-    <div class="card-icon icon-purple">💎</div>
-    <div class="card-body">
-      <div class="card-badge badge-purple">🔒 Vagas Limitadas</div>
-      <div class="card-title">Mentoria Individual</div>
-      <div class="card-desc">Construa sua marca com suporte direto do Carlos — 70K a 200K/mês</div>
-    </div>
-    <div class="card-arrow arrow-purple"><i class="fas fa-arrow-right"></i></div>
-  </a>
-
-  <!-- ── Card 4: ZaveleMídia ── -->
-  <a class="link-card card-teal"
-     href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid"
-     target="_blank" rel="noopener noreferrer">
-    <div class="card-icon icon-teal">📊</div>
-    <div class="card-body">
-      <div class="card-badge badge-teal">🎯 Agência</div>
-      <div class="card-title">ZaveleMídia</div>
-      <div class="card-desc">Gestão de Tráfego e Marketing Digital para escalar sua marca</div>
-    </div>
-    <div class="card-arrow arrow-teal"><i class="fas fa-arrow-right"></i></div>
-  </a>
-
-  <!-- ── Botão Instagram ── -->
-  <a class="ig-btn"
-     href="https://instagram.com/carloseduardooficial"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram"></i>
-    Voltar para o Instagram
-  </a>
-
-  <footer class="footer">
-    © 2025 Carlos Zavele · Todos os direitos reservados<br/>
-    <a href="../">carloseduardooficial.com.br</a>
-  </footer>
-
-</div>
-
+  </div><!-- /wrap -->
 </body>
 </html>
