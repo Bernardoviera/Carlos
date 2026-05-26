@@ -3,599 +3,577 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Carlos Zavele – Especialista em Dropshipping. Marcas que faturam 70K a 200K/mês sem estoque."/>
+  <meta name="description" content="Carlos Zavele – Especialista em Dropshipping sem Estoque. Marcas que faturam 70K a 200K/mês."/>
   <title>Carlos Zavele | Dropshipping Expert</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
-  <style>
-  /* ═══ RESET ═════════════════════════════════════════════════════ */
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --bg:      #03030b;
-    --bg2:     #070710;
-    --surface: #0a0a18;
-    --card:    #0d0d1e;
-    --border:  rgba(255,255,255,.06);
-    --text:    #f0f0fa;
-    --muted:   #6b6b90;
 
-    --gold:    #f5a623; --goldl:  #ffd580;
-    --blue:    #3b7ff5; --bluel:  #7eb8ff;
-    --purple:  #9b6bfa; --purplel:#c4a7ff;
-    --teal:    #0fc4d4; --teall:  #6ee7f0;
-    --pink:    #f43f8e;
+  <style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+  :root{
+    --bg:     #050508;
+    --bg2:    #080810;
+    --card:   #0c0c14;
+    --border: rgba(255,255,255,0.07);
+    --text:   #f2f2ff;
+    --muted:  #6c6c8a;
+
+    --cyan:  #00c4f0;
+    --cyanl: #5de0ff;
+    --cyand: #007fa0;
+    --gold:  #f5c518;
+    --goldl: #ffe066;
   }
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',-apple-system,sans-serif;
-    background:var(--bg);color:var(--text);
-    overflow-x:hidden;
-  }
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
   a{text-decoration:none;color:inherit}
+  img{display:block}
 
-  /* ═══ ORBS ══════════════════════════════════════════════════════ */
-  .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-  .orb{position:absolute;border-radius:50%;filter:blur(130px);will-change:transform}
-  .orb1{width:60vw;height:50vw;top:-10%;left:-10%;
-        background:radial-gradient(ellipse,rgba(59,127,245,.14) 0%,transparent 70%);
-        animation:d1 16s ease-in-out infinite}
-  .orb2{width:50vw;height:42vw;bottom:-8%;right:-10%;
-        background:radial-gradient(ellipse,rgba(155,107,250,.12) 0%,transparent 70%);
-        animation:d2 20s ease-in-out infinite}
-  .orb3{width:35vw;height:30vw;top:50%;left:35%;
-        background:radial-gradient(ellipse,rgba(245,166,35,.08) 0%,transparent 70%);
-        animation:d3 24s ease-in-out infinite}
-  @keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,-60px) scale(1.07)}}
-  @keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,40px) scale(1.05)}}
-  @keyframes d3{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,50px) scale(.93)}}
-  .grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.025;
-         background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-         background-size:200px}
+  /* ── glows ── */
+  .bg-glow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg-glow::before{
+    content:'';position:absolute;top:-15%;left:-10%;
+    width:65vw;height:55vw;max-width:680px;
+    background:radial-gradient(ellipse,rgba(0,196,240,.09) 0%,transparent 65%);
+    animation:p1 14s ease-in-out infinite;
+  }
+  .bg-glow::after{
+    content:'';position:absolute;bottom:-10%;right:-8%;
+    width:55vw;height:45vw;max-width:580px;
+    background:radial-gradient(ellipse,rgba(245,197,24,.06) 0%,transparent 65%);
+    animation:p2 18s ease-in-out infinite;
+  }
+  @keyframes p1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px) scale(1.06)}}
+  @keyframes p2{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px) scale(1.05)}}
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.022;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:180px}
 
-  /* ═══ NAV ════════════════════════════════════════════════════════ */
+  /* ── NAV ── */
   nav{
     position:fixed;top:0;left:0;right:0;z-index:100;
     display:flex;align-items:center;justify-content:space-between;
-    padding:18px 5%;
-    background:rgba(3,3,11,.75);
-    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    padding:16px 5%;
+    background:rgba(5,5,8,.8);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
     border-bottom:1px solid var(--border);
   }
-  .nav-logo{
-    font-family:'Syne',sans-serif;
-    font-size:16px;font-weight:800;letter-spacing:-.3px;
-    background:linear-gradient(120deg,#fff 0%,rgba(255,255,255,.5) 100%);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  .nav-brand{display:flex;align-items:center;gap:10px}
+  .nav-z{
+    width:30px;height:30px;
+    background:var(--cyan);border-radius:7px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:18px;font-weight:800;color:#000;line-height:1;
   }
-  .nav-items{display:flex;align-items:center;gap:28px}
-  .nav-items a{font-size:13.5px;font-weight:500;color:var(--muted);transition:color .2s}
-  .nav-items a:hover{color:var(--text)}
-  .nav-pill{
-    padding:9px 22px;
-    background:linear-gradient(120deg,var(--blue),var(--purple));
+  .nav-name{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    color:rgba(255,255,255,.7);
+  }
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .nav-link{font-size:13px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-link:hover{color:var(--text)}
+  .nav-cta{
+    display:flex;align-items:center;gap:7px;
+    padding:9px 20px;
+    background:var(--cyan);
     border-radius:99px;
-    font-size:13px;font-weight:700;color:#fff !important;
+    font-size:13px;font-weight:700;color:#000;
     transition:opacity .2s,transform .2s;
   }
-  .nav-pill:hover{opacity:.85;transform:translateY(-1px)}
-  @media(max-width:640px){.nav-items .hide-sm{display:none}}
+  .nav-cta:hover{opacity:.85;transform:translateY(-1px)}
+  @media(max-width:600px){.nav-link{display:none}}
 
-  /* ═══ HERO ══════════════════════════════════════════════════════ */
+  /* ── HERO ── */
   .hero{
     position:relative;z-index:2;
     min-height:100vh;
     display:flex;align-items:center;
-    padding:120px 5% 80px;
+    padding:110px 5% 80px;
     overflow:hidden;
   }
   .hero-inner{
-    max-width:1140px;width:100%;margin:0 auto;
-    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    max-width:1120px;width:100%;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:72px;align-items:center;
   }
 
-  /* left */
-  .hero-eyebrow{
+  .hero-tag{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
-    color:var(--gold);margin-bottom:28px;
+    font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+    color:var(--cyan);margin-bottom:24px;
   }
-  .hero-eyebrow::before{content:'';display:block;width:22px;height:1.5px;background:var(--gold)}
+  .hero-tag::before{content:'';display:block;width:20px;height:1.5px;background:var(--cyan)}
+
   .hero-h1{
-    font-family:'Syne',sans-serif;
-    font-size:clamp(42px,6vw,72px);
-    font-weight:800;line-height:.98;letter-spacing:-2px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(44px,6.5vw,78px);
+    font-weight:800;line-height:.93;letter-spacing:-.5px;text-transform:uppercase;
     margin-bottom:24px;
+    color:var(--text);
   }
-  .h1-grad{
-    background:linear-gradient(135deg,var(--bluel) 0%,var(--purplel) 100%);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  }
+  .hero-h1 .hl{color:var(--cyan)}
+  .hero-h1 .hg{color:var(--goldl)}
+
   .hero-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:40px;max-width:440px}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-sub strong{color:var(--goldl)}
+
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
   .btn-primary{
     display:inline-flex;align-items:center;gap:9px;
-    padding:15px 30px;
-    background:linear-gradient(120deg,var(--blue),var(--purple));
-    border-radius:14px;font-size:15px;font-weight:700;color:#fff;
-    transition:transform .22s,box-shadow .22s,opacity .22s;
+    padding:14px 28px;
+    background:var(--cyan);
+    border-radius:12px;font-size:14.5px;font-weight:700;color:#000;
+    transition:transform .2s,box-shadow .2s,opacity .2s;
   }
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,127,245,.35);opacity:.9}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,196,240,.35);opacity:.9}
   .btn-ghost{
     display:inline-flex;align-items:center;gap:9px;
-    padding:15px 30px;
-    background:transparent;border:1px solid rgba(255,255,255,.1);
-    border-radius:14px;font-size:15px;font-weight:600;color:var(--text);
-    transition:border-color .22s,background .22s;
+    padding:14px 28px;
+    background:transparent;border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;font-size:14.5px;font-weight:600;color:var(--text);
+    transition:border-color .2s,background .2s;
   }
-  .btn-ghost:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04)}
 
-  /* right — card */
+  /* hero card */
   .hero-card{
     background:var(--card);border:1px solid var(--border);
-    border-radius:28px;padding:32px;
+    border-radius:24px;padding:28px;
     position:relative;overflow:hidden;
   }
   .hero-card::before{
-    content:'';position:absolute;top:-50%;right:-30%;
-    width:320px;height:320px;
-    background:radial-gradient(ellipse,rgba(155,107,250,.12) 0%,transparent 70%);
+    content:'';position:absolute;top:-40%;right:-25%;
+    width:280px;height:280px;
+    background:radial-gradient(ellipse,rgba(0,196,240,.10) 0%,transparent 70%);
     pointer-events:none;
   }
+  /* cyan accent top border */
+  .hero-card::after{
+    content:'';
+    position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--gold));
+  }
+
+  .hc-top{
+    display:flex;align-items:center;gap:14px;
+    margin-bottom:22px;position:relative;z-index:1;
+  }
   .hc-photo{
-    width:72px;height:72px;
-    border-radius:18px;
-    object-fit:cover;
-    margin-bottom:18px;
-    position:relative;z-index:1;
-    border:2px solid rgba(255,255,255,.08);
+    width:58px;height:58px;border-radius:14px;
+    object-fit:cover;border:2px solid rgba(0,196,240,.2);
+    flex-shrink:0;
   }
-  .hc-monogram{
-    font-family:'Syne',sans-serif;
-    font-size:36px;font-weight:800;
-    background:linear-gradient(135deg,var(--blue),var(--purple));
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-    line-height:1;margin-bottom:22px;
-    position:relative;z-index:1;
-    display:none; /* hidden when photo loads */
-  }
-  .hc-name{font-size:20px;font-weight:800;margin-bottom:4px;position:relative;z-index:1}
-  .hc-role{font-size:13px;color:var(--muted);margin-bottom:24px;position:relative;z-index:1}
+  .hc-info-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--text)}
+  .hc-info-role{font-size:12px;color:var(--muted);margin-top:3px}
+  .hc-info-role span{color:var(--cyan)}
+
+  .hc-divider{height:1px;background:var(--border);margin:0 0 18px;position:relative;z-index:1}
+
   .hc-metrics{
-    display:grid;grid-template-columns:1fr 1fr;gap:12px;
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
     position:relative;z-index:1;
   }
   .hc-m{
     background:rgba(255,255,255,.04);border:1px solid var(--border);
-    border-radius:14px;padding:16px;
+    border-radius:12px;padding:14px;
+    transition:border-color .2s;
   }
-  .hc-m-val{font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1}
-  .hc-m-lbl{font-size:11px;color:var(--muted);font-weight:500;margin-top:4px}
+  .hc-m:hover{border-color:rgba(0,196,240,.2)}
+  .hc-m-val{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.5px;line-height:1}
+  .hc-m-lbl{font-size:11px;color:var(--muted);font-weight:500;margin-top:3px;text-transform:uppercase;letter-spacing:.5px}
 
-  @media(max-width:900px){
-    .hero-inner{grid-template-columns:1fr;gap:52px;text-align:center}
-    .hero-eyebrow,.hero-sub,.hero-ctas{margin-left:auto;margin-right:auto;justify-content:center}
-    .hero-card{order:-1;max-width:360px;margin:0 auto}
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:48px;text-align:center}
+    .hero-tag,.hero-sub,.hero-btns{margin-left:auto;margin-right:auto;justify-content:center}
+    .hero-card{max-width:360px;margin:0 auto;order:-1}
+    .hc-top{justify-content:center}
   }
 
-  /* ═══ SECTION BASE ═══════════════════════════════════════════════ */
-  .section{position:relative;z-index:2;padding:100px 5%}
-  .si{max-width:1140px;margin:0 auto}
-  .s-eyebrow{
+  /* ── SECTION ── */
+  .section{position:relative;z-index:2;padding:96px 5%}
+  .si{max-width:1120px;margin:0 auto}
+
+  .sec-tag{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
-    color:var(--gold);margin-bottom:16px;
+    font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+    color:var(--cyan);margin-bottom:14px;
   }
-  .s-eyebrow::before{content:'';display:block;width:18px;height:1.5px;background:var(--gold)}
-  .s-h2{
-    font-family:'Syne',sans-serif;
-    font-size:clamp(32px,5vw,50px);
-    font-weight:800;letter-spacing:-1.2px;line-height:1.05;
-    margin-bottom:16px;
-  }
-  .s-sub{font-size:16px;color:var(--muted);line-height:1.75;max-width:500px}
+  .sec-tag::before{content:'';display:block;width:18px;height:1.5px;background:var(--cyan)}
 
-  /* ═══ JOURNEY / PRODUTOS ════════════════════════════════════════ */
+  .sec-h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(34px,5vw,52px);font-weight:800;
+    text-transform:uppercase;letter-spacing:-.3px;line-height:1;
+    margin-bottom:14px;color:var(--text);
+  }
+  .sec-sub{font-size:15.5px;color:var(--muted);line-height:1.75;max-width:500px}
+
+  /* ── PRODUTOS ── */
   #produtos{background:var(--bg2)}
   .prod-header{
     display:flex;justify-content:space-between;align-items:flex-end;
-    flex-wrap:wrap;gap:24px;margin-bottom:52px;
+    flex-wrap:wrap;gap:24px;margin-bottom:48px;
   }
-  .prod-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-  }
+  .prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
 
-  /* ── Journey card ── */
-  .j-card{
+  .pc{
     background:var(--card);border:1px solid var(--border);
-    border-radius:24px;padding:28px;
-    display:flex;flex-direction:column;gap:18px;
+    border-radius:20px;padding:26px;
+    display:flex;flex-direction:column;gap:16px;
     position:relative;overflow:hidden;
-    transition:transform .25s ease,border-color .25s,box-shadow .25s;
+    transition:transform .22s,border-color .22s,box-shadow .22s;
   }
-  .j-card:hover{transform:translateY(-5px)}
-  .j-card-top{height:3px;position:absolute;top:0;left:0;right:0;border-radius:24px 24px 0 0}
-  .jt-blue   {background:linear-gradient(90deg,var(--blue),var(--bluel))}
-  .jt-gold   {background:linear-gradient(90deg,var(--gold),var(--goldl))}
-  .jt-purple {background:linear-gradient(90deg,var(--purple),var(--purplel))}
-  .jt-teal   {background:linear-gradient(90deg,var(--teal),var(--teall))}
+  .pc:hover{transform:translateY(-5px)}
+  .pc-top{height:2.5px;position:absolute;top:0;left:0;right:0;border-radius:20px 20px 0 0}
+  .pt-gold {background:linear-gradient(90deg,var(--gold),var(--goldl))}
+  .pt-cyan {background:linear-gradient(90deg,var(--cyan),var(--cyanl))}
+  .pt-mix  {background:linear-gradient(90deg,var(--cyan),var(--gold))}
+  .pt-w    {background:linear-gradient(90deg,rgba(255,255,255,.4),rgba(255,255,255,.1))}
 
-  .j-card.featured{
-    border-color:rgba(245,166,35,.28);
-    background:linear-gradient(160deg,#0f0f1e,#160f05);
-  }
-  .j-card.featured:hover{box-shadow:0 16px 56px rgba(245,166,35,.18)}
-
-  .feat-badge{
-    position:absolute;top:18px;right:18px;
-    background:var(--gold);color:#000;
+  .pc.feat{border-color:rgba(0,196,240,.25);background:linear-gradient(160deg,#0c0c14,#040c12)}
+  .pc.feat:hover{box-shadow:0 14px 48px rgba(0,196,240,.18)}
+  .feat-lbl{
+    position:absolute;top:16px;right:16px;
+    background:var(--cyan);color:#000;
     font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
-    padding:4px 10px;border-radius:8px;
+    padding:4px 10px;border-radius:7px;
   }
-  .j-icon{
-    width:52px;height:52px;border-radius:15px;
-    display:flex;align-items:center;justify-content:center;font-size:22px;
+  .pc-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px}
+  .pi-gold{background:rgba(245,197,24,.12)}
+  .pi-cyan{background:rgba(0,196,240,.12)}
+  .pi-mix {background:linear-gradient(135deg,rgba(0,196,240,.10),rgba(245,197,24,.10))}
+  .pi-w   {background:rgba(255,255,255,.07)}
+  .pc-title{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.2px;
+    color:var(--text);line-height:1.1;
   }
-  .ji-blue  {background:rgba(59,127,245,.12)}
-  .ji-gold  {background:rgba(245,166,35,.12)}
-  .ji-purple{background:rgba(155,107,250,.12)}
-  .ji-teal  {background:rgba(15,196,212,.12)}
-
-  .j-title{font-size:18px;font-weight:800;line-height:1.2;letter-spacing:-.3px}
-  .j-desc {font-size:13.5px;color:var(--muted);line-height:1.65;flex:1}
-  .j-price{font-size:24px;font-weight:900;letter-spacing:-.5px;color:var(--goldl)}
-  .j-price sub{font-size:13px;font-weight:500;color:var(--muted);vertical-align:baseline}
-  .j-cta{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:13px 20px;border-radius:12px;
-    font-size:14px;font-weight:700;
+  .pc-desc{font-size:13.5px;color:var(--muted);line-height:1.65;flex:1}
+  .pc-price{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:28px;font-weight:800;color:var(--goldl);letter-spacing:-.5px;line-height:1;
+  }
+  .pc-price sub{font-size:12px;font-weight:500;color:var(--muted);font-family:'Inter',sans-serif;vertical-align:baseline}
+  .pc-cta{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:12px 18px;border-radius:11px;
+    font-size:13.5px;font-weight:700;
     transition:opacity .2s,transform .2s;
   }
-  .j-cta:hover{opacity:.85;transform:translateX(3px)}
-  .jc-blue  {background:rgba(59,127,245,.12);color:var(--bluel)}
-  .jc-gold  {background:rgba(245,166,35,.12);color:var(--goldl)}
-  .jc-purple{background:rgba(155,107,250,.12);color:var(--purplel)}
-  .jc-teal  {background:rgba(15,196,212,.12);color:var(--teall)}
+  .pc-cta:hover{opacity:.85;transform:translateX(3px)}
+  .pct-gold{background:rgba(245,197,24,.12);color:var(--goldl)}
+  .pct-cyan{background:rgba(0,196,240,.12);color:var(--cyanl)}
+  .pct-mix {background:linear-gradient(90deg,rgba(0,196,240,.12),rgba(245,197,24,.08));color:var(--cyanl)}
+  .pct-w   {background:rgba(255,255,255,.07);color:rgba(255,255,255,.75)}
 
-  /* ═══ SOBRE ══════════════════════════════════════════════════════ */
-  .sobre-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
-    margin-top:64px;
-  }
-  .about-list{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:32px}
+  /* ── SOBRE ── */
+  .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:56px}
+  .about-list{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:28px}
   .about-list li{display:flex;gap:14px;align-items:flex-start}
-  .al-dot{
-    width:22px;height:22px;border-radius:8px;
-    background:rgba(59,127,245,.12);color:var(--bluel);
-    display:flex;align-items:center;justify-content:center;
-    font-size:11px;flex-shrink:0;margin-top:2px;
+  .al-check{
+    width:22px;height:22px;border-radius:7px;
+    background:rgba(0,196,240,.12);color:var(--cyan);
+    display:flex;align-items:center;justify-content:center;font-size:10px;
+    flex-shrink:0;margin-top:2px;
   }
   .al-text{font-size:14.5px;color:var(--muted);line-height:1.65}
   .al-text strong{color:var(--text)}
-
   .sobre-visual{
     background:var(--card);border:1px solid var(--border);
-    border-radius:28px;padding:32px;
+    border-radius:24px;padding:28px;
     display:flex;flex-direction:column;gap:14px;
+    position:relative;overflow:hidden;
   }
-  .sv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .sv-item{
-    background:rgba(255,255,255,.04);border:1px solid var(--border);
-    border-radius:16px;padding:18px;
+  .sobre-visual::after{
+    content:'';position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--gold));
   }
-  .sv-val{font-size:26px;font-weight:900;letter-spacing:-.8px;line-height:1}
-  .sv-lbl{font-size:12px;color:var(--muted);font-weight:500;margin-top:5px}
+  .sv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .sv-item{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:14px;padding:16px}
+  .sv-val{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.5px;line-height:1}
+  .sv-lbl{font-size:11px;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+  @media(max-width:860px){.sobre-grid{grid-template-columns:1fr;gap:40px}}
 
-  @media(max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:48px}}
-
-  /* ═══ CTA BAND ═══════════════════════════════════════════════════ */
+  /* ── CTA BAND ── */
   .cta-band{
     position:relative;z-index:2;
-    padding:96px 5%;
-    background:linear-gradient(160deg,rgba(59,127,245,.06) 0%,rgba(155,107,250,.06) 100%);
+    padding:88px 5%;
+    background:linear-gradient(160deg,rgba(0,196,240,.05) 0%,rgba(245,197,24,.04) 100%);
     border-top:1px solid var(--border);border-bottom:1px solid var(--border);
     text-align:center;
   }
-  .cta-band .si{display:flex;flex-direction:column;align-items:center;gap:28px}
-  .cta-band-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .cta-inner{max-width:640px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px}
+  .cta-band-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 
-  /* ═══ FOOTER ═════════════════════════════════════════════════════ */
-  footer{
-    position:relative;z-index:2;
-    padding:52px 5% 44px;
-    border-top:1px solid var(--border);
-  }
-  .ft{max-width:1140px;margin:0 auto}
-  .ft-top{
-    display:flex;justify-content:space-between;align-items:center;
-    flex-wrap:wrap;gap:24px;margin-bottom:32px;
-  }
-  .ft-logo{
-    font-family:'Syne',sans-serif;
-    font-size:18px;font-weight:800;letter-spacing:-.3px;
-    background:linear-gradient(120deg,#fff,rgba(255,255,255,.4));
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  }
-  .ft-nav{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
-  .ft-nav a{font-size:13px;color:var(--muted);transition:color .2s}
-  .ft-nav a:hover{color:var(--text)}
-  .ft-socials{display:flex;gap:10px}
-  .soc{
-    width:38px;height:38px;border-radius:10px;
-    background:rgba(255,255,255,.04);border:1px solid var(--border);
+  /* ── FOOTER ── */
+  footer{position:relative;z-index:2;padding:48px 5% 40px;border-top:1px solid var(--border)}
+  .ft{max-width:1120px;margin:0 auto}
+  .ft-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:28px}
+  .ft-brand{display:flex;align-items:center;gap:10px}
+  .ft-z{
+    width:28px;height:28px;background:var(--cyan);border-radius:6px;
     display:flex;align-items:center;justify-content:center;
-    font-size:14px;color:var(--muted);
-    transition:background .2s,color .2s,transform .2s;
+    font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:#000;
   }
-  .soc:hover{background:rgba(255,255,255,.09);color:var(--text);transform:translateY(-2px)}
-  .ft-copy{
-    padding-top:24px;border-top:1px solid var(--border);
-    font-size:12px;color:rgba(255,255,255,.14);
-    text-align:center;
+  .ft-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .ft-nav{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+  .ft-nav a{font-size:13px;color:var(--muted);transition:color .2s}
+  .ft-nav a:hover{color:var(--cyan)}
+  .ft-socials{display:flex;gap:9px}
+  .soc{
+    width:36px;height:36px;border-radius:9px;
+    background:rgba(255,255,255,.04);border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);
+    transition:background .2s,color .2s,border-color .2s,transform .2s;
   }
+  .soc:hover{background:rgba(0,196,240,.1);color:var(--cyan);border-color:rgba(0,196,240,.3);transform:translateY(-2px)}
+  .ft-copy{padding-top:22px;border-top:1px solid var(--border);font-size:11.5px;color:rgba(255,255,255,.14);text-align:center}
 
-  /* ═══ REVEAL ══════════════════════════════════════════════════════ */
-  .rev{
-    opacity:0;transform:translateY(22px);
-    transition:opacity .6s cubic-bezier(.4,0,.2,1),
-                transform .6s cubic-bezier(.4,0,.2,1);
-  }
+  /* ── REVEAL ── */
+  .rev{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
   .rev.on{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
 
-  <div class="orbs" aria-hidden="true">
-    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-  <!-- ── NAV ── -->
-  <nav>
-    <div class="nav-logo">Carlos Zavele</div>
-    <div class="nav-items">
-      <a href="#produtos" class="hide-sm">Produtos</a>
-      <a href="#sobre" class="hide-sm">Sobre</a>
-      <a href="/links/" class="nav-pill">
-        <i class="fas fa-rocket" style="font-size:12px"></i> Links Úteis
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-z">Z</div>
+    <span class="nav-name">Carlos Zavele</span>
+  </div>
+  <div class="nav-right">
+    <a href="#produtos" class="nav-link">Produtos</a>
+    <a href="#sobre" class="nav-link">Sobre</a>
+    <a href="/links/" class="nav-cta">
+      <i class="fas fa-rocket" style="font-size:12px"></i> Links Úteis
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Dropshipping Expert</div>
+      <h1 class="hero-h1">
+        Construa sua<br/>
+        <span class="hl">Marca</span><br/>
+        <span class="hg">Milionária</span><br/>
+        sem Estoque
+      </h1>
+      <p class="hero-sub">
+        Método comprovado que já ajudou centenas de empreendedores a faturarem de <strong>70K a 200K/mês</strong> com Dropshipping sem gerenciar estoque.
+      </p>
+      <div class="hero-btns">
+        <a href="/links/" class="btn-primary">
+          <i class="fas fa-rocket" style="font-size:12px"></i> Ver Meus Links
+        </a>
+        <a href="#sobre" class="btn-ghost">
+          Saiba Mais <i class="fas fa-chevron-down" style="font-size:11px"></i>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-card">
+        <div class="hc-top">
+          <img class="hc-photo"
+               src="https://unavatar.io/instagram/carloseduardooficial"
+               alt="Carlos Zavele"
+               onerror="this.style.display='none'"/>
+          <div>
+            <div class="hc-info-name">Carlos Zavele</div>
+            <div class="hc-info-role"><span>@carloseduardooficial</span> · Dropshipping Expert</div>
+          </div>
+        </div>
+        <div class="hc-divider"></div>
+        <div class="hc-metrics">
+          <div class="hc-m">
+            <div class="hc-m-val" style="color:var(--cyan)">+100K</div>
+            <div class="hc-m-lbl">Seguidores</div>
+          </div>
+          <div class="hc-m">
+            <div class="hc-m-val" style="color:var(--goldl)">+500</div>
+            <div class="hc-m-lbl">Alunos</div>
+          </div>
+          <div class="hc-m">
+            <div class="hc-m-val" style="color:var(--cyanl)">200K</div>
+            <div class="hc-m-lbl">Fat./Mês</div>
+          </div>
+          <div class="hc-m">
+            <div class="hc-m-val" style="color:var(--goldl)">4</div>
+            <div class="hc-m-lbl">Produtos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section" id="produtos">
+  <div class="si">
+    <div class="prod-header rev">
+      <div>
+        <div class="sec-tag">Produtos</div>
+        <h2 class="sec-h2" style="margin-bottom:0">Sua jornada<br/>começa aqui</h2>
+      </div>
+      <p class="sec-sub" style="max-width:320px">Do primeiro passo até a mentoria mais exclusiva — há um produto certo para cada momento.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="pc rev" style="transition-delay:.04s">
+        <div class="pc-top pt-gold"></div>
+        <div class="pc-icon pi-gold">🚀</div>
+        <div class="pc-title">Guia Destravar das Vendas</div>
+        <div class="pc-desc">Guia completo para fazer 1K por dia com Dropshipping. O começo certo para quem está começando do zero.</div>
+        <div class="pc-price">R$27<sub>,00</sub></div>
+        <a class="pc-cta pct-gold" href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid" target="_blank" rel="noopener">
+          Garantir vaga <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="pc feat rev" style="transition-delay:.09s">
+        <div class="pc-top pt-cyan"></div>
+        <div class="feat-lbl">⭐ Destaque</div>
+        <div class="pc-icon pi-cyan">👑</div>
+        <div class="pc-title">Mentoria Marca Milionária</div>
+        <div class="pc-desc">Do zero aos 100.000/mês sem estoque. Método completo em grupo com suporte e comunidade ativa.</div>
+        <a class="pc-cta pct-cyan" href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/" target="_blank" rel="noopener">
+          Fazer inscrição <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="pc rev" style="transition-delay:.14s">
+        <div class="pc-top pt-mix"></div>
+        <div class="pc-icon pi-mix">💎</div>
+        <div class="pc-title">Mentoria Individual</div>
+        <div class="pc-desc">Suporte 1-a-1 direto com o Carlos para construir uma marca de 70K a 200K por mês.</div>
+        <div style="font-size:13px;color:var(--cyanl);font-weight:600">🔒 Vagas Limitadas</div>
+        <a class="pc-cta pct-mix" href="https://carloseduardooficial.com.br/carlos-mentoria-individual/" target="_blank" rel="noopener">
+          Quero aplicar <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="pc rev" style="transition-delay:.19s">
+        <div class="pc-top pt-w"></div>
+        <div class="pc-icon pi-w" style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:var(--cyan)">Z</div>
+        <div class="pc-title">ZaveleMídia</div>
+        <div class="pc-desc">Gestão de Tráfego e Marketing Digital. Nossa agência especializada escala marcas de e-commerce.</div>
+        <a class="pc-cta pct-w" href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid" target="_blank" rel="noopener">
+          Contratar agência <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="si">
+    <div class="rev">
+      <div class="sec-tag">Sobre</div>
+      <h2 class="sec-h2">Quem é o<br/>Carlos Zavele?</h2>
+      <p class="sec-sub">Empreendedor digital, especialista em Dropshipping sem estoque e fundador da ZaveleMídia.</p>
+    </div>
+    <div class="sobre-grid">
+      <ul class="about-list rev">
+        <li>
+          <div class="al-check"><i class="fas fa-check" style="font-size:10px"></i></div>
+          <p class="al-text"><strong>Dropshipping sem Estoque</strong> — modelo que permite faturar alto sem gerenciar produtos físicos.</p>
+        </li>
+        <li>
+          <div class="al-check"><i class="fas fa-check" style="font-size:10px"></i></div>
+          <p class="al-text"><strong>+500 alunos formados</strong> — comunidade ativa de empreendedores aplicando o método.</p>
+        </li>
+        <li>
+          <div class="al-check"><i class="fas fa-check" style="font-size:10px"></i></div>
+          <p class="al-text"><strong>Fundador da ZaveleMídia</strong> — agência especializada em gestão de tráfego e marketing digital.</p>
+        </li>
+        <li>
+          <div class="al-check"><i class="fas fa-check" style="font-size:10px"></i></div>
+          <p class="al-text"><strong>Resultados comprovados</strong> — alunos faturando de 70K a 200K por mês com o método aplicado.</p>
+        </li>
+      </ul>
+      <div class="sobre-visual rev" style="transition-delay:.1s">
+        <div class="sv-grid">
+          <div class="sv-item"><div class="sv-val" style="color:var(--cyan)">+100K</div><div class="sv-lbl">Seguidores</div></div>
+          <div class="sv-item"><div class="sv-val" style="color:var(--goldl)">+500</div><div class="sv-lbl">Alunos</div></div>
+          <div class="sv-item"><div class="sv-val" style="color:var(--cyanl)">200K</div><div class="sv-lbl">Fat./Mês</div></div>
+          <div class="sv-item"><div class="sv-val" style="color:var(--goldl)">4</div><div class="sv-lbl">Produtos</div></div>
+        </div>
+        <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener"
+           class="btn-primary" style="justify-content:center;width:100%">
+          <i class="fab fa-instagram"></i> Seguir no Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="sec-tag" style="color:var(--goldl)">Comece Agora</div>
+    <h2 class="sec-h2">
+      Pronto para sua<br/>
+      <span style="color:var(--cyan)">Marca Milionária?</span>
+    </h2>
+    <p class="sec-sub" style="text-align:center;max-width:420px">
+      Escolha o produto certo para o seu momento e dê o próximo passo agora.
+    </p>
+    <div class="cta-band-btns">
+      <a href="/links/" class="btn-primary">
+        <i class="fas fa-rocket" style="font-size:12px"></i> Ver Todos os Links
+      </a>
+      <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="btn-ghost">
+        <i class="fab fa-instagram"></i> Instagram
       </a>
     </div>
-  </nav>
-
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-eyebrow">Dropshipping Expert</div>
-        <h1 class="hero-h1">
-          Construa sua<br/>
-          <span class="h1-grad">Marca Milionária</span><br/>
-          sem Estoque
-        </h1>
-        <p class="hero-sub">
-          Método comprovado que já ajudou centenas de empreendedores a faturarem de <strong style="color:var(--goldl)">70K a 200K/mês</strong> com Dropshipping sem precisar gerenciar estoque.
-        </p>
-        <div class="hero-ctas">
-          <a href="/links/" class="btn-primary">
-            <i class="fas fa-rocket" style="font-size:13px"></i> Ver Meus Links
-          </a>
-          <a href="#sobre" class="btn-ghost">
-            Saiba Mais <i class="fas fa-chevron-down" style="font-size:11px"></i>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <div class="hero-card">
-          <img
-            class="hc-photo"
-            src="https://unavatar.io/instagram/carloseduardooficial"
-            alt="Carlos Zavele"
-            loading="eager"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-          />
-          <div class="hc-monogram">CZ</div>
-          <div class="hc-name">Carlos Zavele</div>
-          <div class="hc-role">@carloseduardooficial · Dropshipping Expert</div>
-          <div class="hc-metrics">
-            <div class="hc-m">
-              <div class="hc-m-val" style="color:var(--bluel)">+100K</div>
-              <div class="hc-m-lbl">Seguidores</div>
-            </div>
-            <div class="hc-m">
-              <div class="hc-m-val" style="color:var(--goldl)">+500</div>
-              <div class="hc-m-lbl">Alunos</div>
-            </div>
-            <div class="hc-m">
-              <div class="hc-m-val" style="color:var(--purplel)">200K</div>
-              <div class="hc-m-lbl">Fat./Mês</div>
-            </div>
-            <div class="hc-m">
-              <div class="hc-m-val" style="color:var(--teall)">4</div>
-              <div class="hc-m-lbl">Produtos</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PRODUTOS ── -->
-  <section class="section" id="produtos">
-    <div class="si">
-      <div class="prod-header rev">
-        <div>
-          <div class="s-eyebrow">Produtos</div>
-          <h2 class="s-h2" style="margin-bottom:0">Sua jornada começa aqui</h2>
-        </div>
-        <p class="s-sub" style="max-width:340px">
-          Do primeiro passo até a mentoria mais exclusiva — há um produto certo para cada momento.
-        </p>
-      </div>
-
-      <div class="prod-grid">
-        <div class="j-card rev" style="transition-delay:.05s">
-          <div class="j-card-top jt-blue"></div>
-          <div class="j-icon ji-blue">🚀</div>
-          <div class="j-title">Guia Destravar das Vendas</div>
-          <div class="j-desc">Guia completo para fazer 1K por dia com Dropshipping. O começo certo para quem está começando do zero.</div>
-          <div class="j-price">R$27<sub>,00</sub></div>
-          <a class="j-cta jc-blue" href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid" target="_blank" rel="noopener">
-            Garantir vaga <i class="fas fa-arrow-right" style="font-size:11px"></i>
-          </a>
-        </div>
-
-        <div class="j-card featured rev" style="transition-delay:.10s">
-          <div class="j-card-top jt-gold"></div>
-          <div class="feat-badge">⭐ Destaque</div>
-          <div class="j-icon ji-gold">👑</div>
-          <div class="j-title">Mentoria Marca Milionária</div>
-          <div class="j-desc">Do zero aos 100.000/mês sem estoque. Método completo em grupo com suporte e comunidade ativa.</div>
-          <a class="j-cta jc-gold" href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/" target="_blank" rel="noopener">
-            Fazer inscrição <i class="fas fa-arrow-right" style="font-size:11px"></i>
-          </a>
-        </div>
-
-        <div class="j-card rev" style="transition-delay:.15s">
-          <div class="j-card-top jt-purple"></div>
-          <div class="j-icon ji-purple">💎</div>
-          <div class="j-title">Mentoria Individual</div>
-          <div class="j-desc">Suporte 1-a-1 direto com o Carlos. Para construir uma marca que fatura 70K a 200K por mês.</div>
-          <div style="font-size:13px;color:var(--purplel);font-weight:600">🔒 Vagas Limitadas</div>
-          <a class="j-cta jc-purple" href="https://carloseduardooficial.com.br/carlos-mentoria-individual/" target="_blank" rel="noopener">
-            Quero aplicar <i class="fas fa-arrow-right" style="font-size:11px"></i>
-          </a>
-        </div>
-
-        <div class="j-card rev" style="transition-delay:.20s">
-          <div class="j-card-top jt-teal"></div>
-          <div class="j-icon ji-teal">📊</div>
-          <div class="j-title">ZaveleMídia</div>
-          <div class="j-desc">Gestão de Tráfego e Marketing Digital. Nossa agência especializada escala marcas de e-commerce.</div>
-          <a class="j-cta jc-teal" href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid" target="_blank" rel="noopener">
-            Contratar agência <i class="fas fa-arrow-right" style="font-size:11px"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SOBRE ── -->
-  <section class="section" id="sobre">
-    <div class="si">
-      <div class="rev">
-        <div class="s-eyebrow">Sobre</div>
-        <h2 class="s-h2">Quem é o Carlos Zavele?</h2>
-        <p class="s-sub">Empreendedor digital, especialista em Dropshipping sem estoque e fundador da ZaveleMídia.</p>
-      </div>
-
-      <div class="sobre-grid">
-        <ul class="about-list rev">
-          <li>
-            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
-            <p class="al-text"><strong>Dropshipping sem Estoque</strong> — modelo que permite faturar alto sem gerenciar produtos físicos.</p>
-          </li>
-          <li>
-            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
-            <p class="al-text"><strong>+500 alunos formados</strong> — comunidade ativa de empreendedores aplicando o método.</p>
-          </li>
-          <li>
-            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
-            <p class="al-text"><strong>Fundador da ZaveleMídia</strong> — agência especializada em gestão de tráfego e marketing digital.</p>
-          </li>
-          <li>
-            <div class="al-dot"><i class="fas fa-check" style="font-size:10px"></i></div>
-            <p class="al-text"><strong>Resultados comprovados</strong> — alunos faturando de 70K a 200K por mês com o método aplicado.</p>
-          </li>
-        </ul>
-
-        <div class="sobre-visual rev" style="transition-delay:.1s">
-          <div class="sv-grid">
-            <div class="sv-item">
-              <div class="sv-val" style="color:var(--bluel)">+100K</div>
-              <div class="sv-lbl">Seguidores no Instagram</div>
-            </div>
-            <div class="sv-item">
-              <div class="sv-val" style="color:var(--goldl)">+500</div>
-              <div class="sv-lbl">Alunos treinados</div>
-            </div>
-            <div class="sv-item">
-              <div class="sv-val" style="color:var(--purplel)">200K</div>
-              <div class="sv-lbl">Faturamento/mês alcançado</div>
-            </div>
-            <div class="sv-item">
-              <div class="sv-val" style="color:var(--teall)">4</div>
-              <div class="sv-lbl">Produtos disponíveis</div>
-            </div>
-          </div>
-          <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener"
-             class="btn-primary" style="justify-content:center">
-            <i class="fab fa-instagram"></i> Seguir no Instagram
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA BAND ── -->
-  <div class="cta-band">
-    <div class="si">
-      <div class="s-eyebrow" style="color:var(--goldl)">Comece Agora</div>
-      <h2 class="s-h2">
-        Pronto para sua<br/>
-        <span style="background:linear-gradient(135deg,var(--goldl),var(--bluel));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-          Marca Milionária?
-        </span>
-      </h2>
-      <p class="s-sub" style="text-align:center">
-        Escolha o produto certo para o seu momento e dê o próximo passo agora.
-      </p>
-      <div class="cta-band-btns">
-        <a href="/links/" class="btn-primary">
-          <i class="fas fa-rocket" style="font-size:13px"></i> Ver Todos os Links
-        </a>
-        <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="btn-ghost">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
-    </div>
   </div>
+</div>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <div class="ft">
-      <div class="ft-top">
-        <div class="ft-logo">Carlos Zavele</div>
-        <ul class="ft-nav">
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="/links/">Links</a></li>
-        </ul>
-        <div class="ft-socials">
-          <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="soc" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me" target="_blank" rel="noopener" class="soc" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-z">Z</div>
+        <span class="ft-name">Carlos Zavele</span>
       </div>
-      <div class="ft-copy">© 2025 Carlos Zavele · Todos os direitos reservados</div>
+      <ul class="ft-nav">
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+      <div class="ft-socials">
+        <a href="https://instagram.com/carloseduardooficial" target="_blank" rel="noopener" class="soc" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me" target="_blank" rel="noopener" class="soc" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
-  </footer>
+    <div class="ft-copy">© 2025 Carlos Zavele · Todos os direitos reservados</div>
+  </div>
+</footer>
 
-  <script>
-    (function(){
-      var els=document.querySelectorAll('.rev');
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
-        });
-      },{threshold:.1});
-      els.forEach(function(el){io.observe(el)});
-    })();
-  </script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rev');
+  var io=new IntersectionObserver(function(e){
+    e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}});
+  },{threshold:.1});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>

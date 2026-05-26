@@ -6,587 +6,464 @@
   <meta name="description" content="Carlos Zavele – Links úteis: Dropshipping, Mentoria e Marketing Digital"/>
   <title>Carlos Zavele | Links</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
 
   <style>
-  /* ═══ RESET ═══════════════════════════════════════════════════ */
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --bg:       #03030b;
-    --surface:  #0a0a15;
-    --card:     #0d0d1c;
-    --border:   rgba(255,255,255,0.055);
-    --text:     #f0f0fa;
-    --muted:    #6b6b90;
 
-    --gold:   #f5a623;
-    --goldl:  #ffd580;
-    --blue:   #3b7ff5;
-    --bluel:  #7eb8ff;
-    --purple: #9b6bfa;
-    --purplel:#c4a7ff;
-    --teal:   #0fc4d4;
-    --teall:  #6ee7f0;
-    --pink:   #f43f8e;
+  :root{
+    --bg:      #050508;
+    --card:    #0c0c12;
+    --card2:   #101018;
+    --border:  rgba(255,255,255,0.07);
+    --text:    #f2f2ff;
+    --muted:   #6c6c8a;
+
+    --cyan:    #00c4f0;
+    --cyanl:   #5de0ff;
+    --cyand:   #007fa0;
+    --gold:    #f5c518;
+    --goldl:   #ffe066;
+    --white:   #ffffff;
   }
+
   html{scroll-behavior:smooth}
+
   body{
     font-family:'Inter',-apple-system,sans-serif;
     background:var(--bg);
     color:var(--text);
     min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    display:flex;flex-direction:column;align-items:center;
     padding:0 0 100px;
     overflow-x:hidden;
     position:relative;
   }
   a{text-decoration:none;color:inherit}
 
-  /* ═══ ANIMATED ORBS ════════════════════════════════════════════ */
-  .orbs{
-    position:fixed;inset:0;
-    pointer-events:none;z-index:0;
-    overflow:hidden;
+  /* ── glow bg ── */
+  .bg-glow{
+    position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;
   }
-  .orb{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(120px);
-    will-change:transform;
+  .bg-glow::before{
+    content:'';position:absolute;
+    top:-20%;left:-10%;
+    width:70vw;height:60vw;max-width:700px;max-height:600px;
+    background:radial-gradient(ellipse,rgba(0,196,240,.10) 0%,transparent 65%);
+    animation:pulse1 12s ease-in-out infinite;
   }
-  .orb1{
-    width:70vw;height:55vw;max-width:700px;max-height:560px;
-    top:-15%;left:-20%;
-    background:radial-gradient(ellipse,rgba(59,127,245,.18) 0%,transparent 70%);
-    animation:drift1 14s ease-in-out infinite;
+  .bg-glow::after{
+    content:'';position:absolute;
+    bottom:-15%;right:-10%;
+    width:55vw;height:45vw;max-width:560px;max-height:460px;
+    background:radial-gradient(ellipse,rgba(245,197,24,.07) 0%,transparent 65%);
+    animation:pulse2 16s ease-in-out infinite;
   }
-  .orb2{
-    width:55vw;height:45vw;max-width:580px;max-height:480px;
-    bottom:-10%;right:-15%;
-    background:radial-gradient(ellipse,rgba(155,107,250,.14) 0%,transparent 70%);
-    animation:drift2 18s ease-in-out infinite;
-  }
-  .orb3{
-    width:40vw;height:35vw;max-width:420px;max-height:380px;
-    top:45%;left:30%;
-    background:radial-gradient(ellipse,rgba(245,166,35,.09) 0%,transparent 70%);
-    animation:drift3 22s ease-in-out infinite;
-  }
-  @keyframes drift1{
-    0%,100%{transform:translate(0,0) scale(1)}
-    50%     {transform:translate(40px,-50px) scale(1.08)}
-  }
-  @keyframes drift2{
-    0%,100%{transform:translate(0,0) scale(1)}
-    50%     {transform:translate(-50px,30px) scale(1.06)}
-  }
-  @keyframes drift3{
-    0%,100%{transform:translate(0,0) scale(1)}
-    50%     {transform:translate(30px,40px) scale(0.94)}
-  }
+  @keyframes pulse1{0%,100%{transform:scale(1) translate(0,0)}50%{transform:scale(1.08) translate(30px,-40px)}}
+  @keyframes pulse2{0%,100%{transform:scale(1) translate(0,0)}50%{transform:scale(1.06) translate(-30px,30px)}}
 
-  /* grain overlay */
-  .grain{
-    position:fixed;inset:0;
-    pointer-events:none;z-index:1;
-    opacity:.03;
+  /* grain */
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.025;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size:200px 200px;
-  }
+    background-size:180px}
 
-  /* ═══ MAIN WRAPPER ═════════════════════════════════════════════ */
+  /* ── wrap ── */
   .wrap{
     position:relative;z-index:2;
-    width:100%;max-width:520px;
+    width:100%;max-width:500px;
     padding:0 18px;
     display:flex;flex-direction:column;align-items:center;
-    gap:0;
   }
 
-  /* ═══ TOP BAR ══════════════════════════════════════════════════ */
+  /* ── topbar ── */
   .topbar{
     width:100%;
     display:flex;align-items:center;justify-content:space-between;
-    padding:28px 0 0;
-    margin-bottom:48px;
+    padding:26px 0 0;
+    margin-bottom:44px;
   }
-  .monogram{
-    font-family:'Syne',sans-serif;
-    font-size:15px;font-weight:800;
-    letter-spacing:3px;text-transform:uppercase;
+  .brand-mark{
+    display:flex;align-items:center;gap:10px;
+  }
+  .brand-z{
+    width:32px;height:32px;
+    background:var(--cyan);
+    border-radius:7px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:20px;font-weight:800;
+    color:#000;
+    line-height:1;
+  }
+  .brand-name{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
     color:rgba(255,255,255,.35);
   }
   .ig-follow{
     display:inline-flex;align-items:center;gap:7px;
     padding:8px 16px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
     border-radius:99px;
-    font-size:12px;font-weight:600;
+    font-size:12.5px;font-weight:600;
     color:var(--muted);
     transition:border-color .2s,color .2s,background .2s;
   }
-  .ig-follow:hover{border-color:rgba(255,255,255,.2);color:var(--text);background:rgba(255,255,255,.04)}
-  .ig-follow i{color:var(--pink)}
+  .ig-follow:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,196,240,.06)}
+  .ig-follow i{color:#e1306c}
 
-  /* ═══ HERO ═════════════════════════════════════════════════════ */
+  /* ── hero ── */
   .hero{
     width:100%;
     display:flex;flex-direction:column;align-items:flex-start;
-    gap:0;
-    margin-bottom:52px;
-  }
-  /* avatar */
-  .hero-avatar{
-    width:76px;height:76px;
-    border-radius:50%;
-    position:relative;
-    margin-bottom:22px;
-  }
-  .hero-avatar::before{
-    content:'';
-    position:absolute;inset:-3px;
-    border-radius:50%;
-    background:conic-gradient(from 0deg,var(--blue),var(--purple),var(--pink),var(--gold),var(--blue));
-    animation:spin 4s linear infinite;
-    z-index:0;
-  }
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .hero-avatar img{
-    position:relative;z-index:1;
-    width:100%;height:100%;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid var(--bg);
-    display:block;
+    margin-bottom:48px;
   }
 
-  .hero-eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:11px;font-weight:700;
-    letter-spacing:2.5px;text-transform:uppercase;
-    color:var(--gold);
-    margin-bottom:20px;
-  }
-  .hero-eyebrow::before{
-    content:'';
-    display:block;width:22px;height:1.5px;
-    background:var(--gold);
-  }
-  .hero-name{
-    font-family:'Syne',sans-serif;
-    font-size:clamp(52px,14vw,80px);
-    font-weight:800;
-    line-height:.95;
-    letter-spacing:-2px;
-    margin-bottom:6px;
-    background:linear-gradient(170deg,#ffffff 30%,rgba(255,255,255,.45) 100%);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-  }
-  .hero-underline{
-    width:56px;height:3px;
-    background:linear-gradient(90deg,var(--gold),var(--blue));
-    border-radius:99px;
-    margin:14px 0 22px;
+  /* avatar */
+  .av-wrap{
+    width:80px;height:80px;
+    border-radius:50%;
     position:relative;
-    overflow:hidden;
+    margin-bottom:20px;
+    flex-shrink:0;
   }
-  .hero-underline::after{
+  .av-wrap::before{
     content:'';
-    position:absolute;inset:0;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);
-    animation:shimmer 2.4s ease-in-out infinite;
+    position:absolute;inset:-3px;border-radius:50%;
+    background:conic-gradient(from 0deg,var(--cyan),#007dff,var(--cyan),var(--gold),var(--cyan));
+    animation:spin 5s linear infinite;z-index:0;
   }
-  @keyframes shimmer{
-    0%  {transform:translateX(-100%)}
-    100%{transform:translateX(300%)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .av-wrap img{
+    position:relative;z-index:1;
+    width:100%;height:100%;border-radius:50%;
+    object-fit:cover;border:3px solid var(--bg);display:block;
   }
+
+  .hero-label{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+    color:var(--cyan);
+    margin-bottom:12px;
+  }
+  .hero-label::before{content:'';display:block;width:20px;height:1.5px;background:var(--cyan)}
+
+  .hero-name{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(58px,15vw,86px);
+    font-weight:800;
+    line-height:.92;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:0;
+  }
+  .hero-name .hl{color:var(--cyan)}
+
+  /* linha cyan animada */
+  .cyan-line{
+    width:64px;height:3px;
+    background:linear-gradient(90deg,var(--cyan),var(--gold));
+    border-radius:2px;
+    margin:16px 0 20px;
+    position:relative;overflow:hidden;
+  }
+  .cyan-line::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent);
+    animation:shine 2s ease-in-out infinite;
+  }
+  @keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
+
   .hero-bio{
-    font-size:15px;line-height:1.65;
-    color:var(--muted);
-    max-width:380px;
-    margin-bottom:32px;
+    font-size:14.5px;line-height:1.7;color:var(--muted);
+    max-width:380px;margin-bottom:28px;
   }
   .hero-bio strong{color:var(--goldl)}
 
   /* stats */
-  .stats{
-    display:flex;gap:10px;flex-wrap:wrap;
-  }
+  .stats{display:flex;gap:8px;flex-wrap:wrap}
   .stat{
     display:flex;flex-direction:column;align-items:flex-start;
-    padding:12px 18px;
-    background:rgba(255,255,255,.04);
-    border:1px solid var(--border);
-    border-radius:14px;
-    transition:border-color .2s;
-  }
-  .stat:hover{border-color:rgba(255,255,255,.12)}
-  .stat-val{
-    font-size:17px;font-weight:800;letter-spacing:-.4px;
-    line-height:1;
-  }
-  .stat-lbl{font-size:10.5px;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.6px}
-
-  /* ═══ SECTION DIVIDER ══════════════════════════════════════════ */
-  .divider{
-    width:100%;
-    display:flex;align-items:center;gap:14px;
-    margin-bottom:22px;
-  }
-  .divider-line{flex:1;height:1px;background:var(--border)}
-  .divider-label{
-    font-size:10px;font-weight:700;
-    letter-spacing:2.5px;text-transform:uppercase;
-    color:var(--muted);
-    white-space:nowrap;
-  }
-
-  /* ═══ OFFER CARDS ══════════════════════════════════════════════ */
-  .cards{
-    width:100%;
-    display:flex;flex-direction:column;
-    gap:14px;
-    margin-bottom:28px;
-  }
-
-  .card{
-    width:100%;
+    padding:11px 16px;
     background:var(--card);
     border:1px solid var(--border);
-    border-radius:22px;
-    overflow:hidden;
-    cursor:pointer;
-    text-decoration:none;
-    color:inherit;
+    border-radius:12px;
+    transition:border-color .2s;
+  }
+  .stat:hover{border-color:rgba(0,196,240,.25)}
+  .stat-val{font-size:17px;font-weight:800;letter-spacing:-.4px;line-height:1}
+  .stat-lbl{font-size:10px;color:var(--muted);font-weight:600;margin-top:3px;text-transform:uppercase;letter-spacing:.8px}
+
+  /* ── divider ── */
+  .divider{
+    width:100%;display:flex;align-items:center;gap:14px;
+    margin:0 0 20px;
+  }
+  .div-line{flex:1;height:1px;background:var(--border)}
+  .div-label{
+    font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--muted);white-space:nowrap;
+  }
+
+  /* ── cards ── */
+  .cards{width:100%;display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+
+  .card{
+    width:100%;background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;overflow:hidden;
+    cursor:pointer;text-decoration:none;color:inherit;
     display:flex;flex-direction:column;
     position:relative;
-    transition:transform .25s cubic-bezier(.4,0,.2,1),
-                border-color .25s ease,
-                box-shadow .25s ease;
-    opacity:0;
-    animation:riseIn .5s cubic-bezier(.4,0,.2,1) forwards;
+    transition:transform .22s cubic-bezier(.4,0,.2,1),
+                border-color .22s,box-shadow .22s;
+    opacity:0;animation:up .45s cubic-bezier(.4,0,.2,1) forwards;
   }
   .card:nth-child(1){animation-delay:.06s}
   .card:nth-child(2){animation-delay:.14s}
   .card:nth-child(3){animation-delay:.22s}
   .card:nth-child(4){animation-delay:.30s}
-
-  @keyframes riseIn{
-    from{opacity:0;transform:translateY(24px)}
-    to  {opacity:1;transform:translateY(0)}
-  }
+  @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
   .card:hover{transform:translateY(-4px)}
-  .card:active{transform:translateY(-2px) scale(.99)}
+  .card:active{transform:scale(.99)}
 
-  /* Colored top strip */
-  .card-strip{
-    height:3px;
-    width:100%;
-    flex-shrink:0;
+  /* top strip */
+  .strip{height:2.5px;width:100%;flex-shrink:0}
+  .s-cyan  {background:linear-gradient(90deg,var(--cyan),var(--cyanl))}
+  .s-gold  {background:linear-gradient(90deg,var(--gold),var(--goldl))}
+  .s-white {background:linear-gradient(90deg,rgba(255,255,255,.6),rgba(255,255,255,.2))}
+  .s-mixed {background:linear-gradient(90deg,var(--cyan),var(--gold))}
+
+  .card-cyan:hover  {border-color:rgba(0,196,240,.3);box-shadow:0 12px 40px rgba(0,196,240,.14)}
+  .card-gold:hover  {border-color:rgba(245,197,24,.3);box-shadow:0 12px 40px rgba(245,197,24,.14)}
+  .card-white:hover {border-color:rgba(255,255,255,.2);box-shadow:0 12px 40px rgba(255,255,255,.08)}
+  .card-mixed:hover {border-color:rgba(0,196,240,.25);box-shadow:0 12px 40px rgba(0,196,240,.12)}
+
+  /* card body */
+  .cb{padding:20px 20px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+
+  .cb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+
+  .cb-icon{
+    width:44px;height:44px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;
   }
-  .strip-blue   {background:linear-gradient(90deg,var(--blue),var(--bluel))}
-  .strip-gold   {background:linear-gradient(90deg,var(--gold),var(--goldl))}
-  .strip-purple {background:linear-gradient(90deg,var(--purple),var(--purplel))}
-  .strip-teal   {background:linear-gradient(90deg,var(--teal),var(--teall))}
+  .ic-cyan  {background:rgba(0,196,240,.12)}
+  .ic-gold  {background:rgba(245,197,24,.12)}
+  .ic-white {background:rgba(255,255,255,.07)}
+  .ic-mixed {background:linear-gradient(135deg,rgba(0,196,240,.10),rgba(245,197,24,.10))}
 
-  .card-blue:hover  {border-color:rgba(59,127,245,.3);box-shadow:0 16px 48px rgba(59,127,245,.18)}
-  .card-gold:hover  {border-color:rgba(245,166,35,.3);box-shadow:0 16px 48px rgba(245,166,35,.18)}
-  .card-purple:hover{border-color:rgba(155,107,250,.3);box-shadow:0 16px 48px rgba(155,107,250,.18)}
-  .card-teal:hover  {border-color:rgba(15,196,212,.3);box-shadow:0 16px 48px rgba(15,196,212,.18)}
-
-  /* Card body */
-  .card-body{
-    padding:22px 22px 20px;
-    display:flex;flex-direction:column;
-    gap:14px;
-    flex:1;
-  }
-
-  .card-head{
-    display:flex;align-items:flex-start;justify-content:space-between;
-    gap:12px;
-  }
-
-  .card-icon-wrap{
-    width:46px;height:46px;
-    border-radius:13px;
-    display:flex;align-items:center;justify-content:center;
-    font-size:20px;
-    flex-shrink:0;
-  }
-  .iw-blue  {background:rgba(59,127,245,.12)}
-  .iw-gold  {background:rgba(245,166,35,.12)}
-  .iw-purple{background:rgba(155,107,250,.12)}
-  .iw-teal  {background:rgba(15,196,212,.12)}
-
-  .card-badge{
-    display:inline-flex;align-items:center;gap:5px;
-    padding:5px 11px;
-    border-radius:99px;
-    font-size:10px;font-weight:700;
-    letter-spacing:.5px;text-transform:uppercase;
+  .cb-badge{
+    display:inline-flex;align-items:center;gap:4px;
+    padding:4px 10px;border-radius:99px;
+    font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
     white-space:nowrap;
   }
-  .b-blue  {background:rgba(59,127,245,.12);color:var(--bluel)}
-  .b-gold  {background:rgba(245,166,35,.12);color:var(--goldl)}
-  .b-purple{background:rgba(155,107,250,.12);color:var(--purplel)}
-  .b-teal  {background:rgba(15,196,212,.12);color:var(--teall)}
+  .bg-cyan  {background:rgba(0,196,240,.12);color:var(--cyanl)}
+  .bg-gold  {background:rgba(245,197,24,.12);color:var(--goldl)}
+  .bg-white {background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+  .bg-mixed {background:rgba(0,196,240,.1);color:var(--cyanl)}
 
-  .card-title{
-    font-size:18px;font-weight:800;
-    line-height:1.2;letter-spacing:-.3px;
-    color:var(--text);
+  .cb-title{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;
+    color:var(--white);line-height:1.1;
   }
-  .card-desc{
-    font-size:13.5px;line-height:1.6;
-    color:var(--muted);
+  .cb-desc{font-size:13px;line-height:1.6;color:var(--muted)}
+  .cb-price{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:28px;font-weight:800;color:var(--goldl);
+    letter-spacing:-.5px;line-height:1;
   }
-  .card-price{
-    font-size:22px;font-weight:900;
-    letter-spacing:-.5px;
-    color:var(--goldl);
-    line-height:1;
-  }
-  .card-price span{font-size:13px;font-weight:500;color:var(--muted)}
+  .cb-price small{font-size:13px;font-weight:500;color:var(--muted);font-family:'Inter',sans-serif}
 
-  /* CTA button inside card */
-  .card-cta{
-    display:flex;align-items:center;justify-content:center;gap:9px;
-    width:100%;
-    padding:14px 20px;
-    border-radius:13px;
-    font-size:14px;font-weight:700;
-    letter-spacing:.1px;
-    transition:opacity .2s,transform .2s;
-    cursor:pointer;
+  .cb-cta{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;padding:13px 18px;border-radius:11px;
+    font-size:13.5px;font-weight:700;letter-spacing:.2px;
+    transition:opacity .2s,transform .2s;cursor:pointer;
   }
-  .card-cta:hover{opacity:.88;transform:translateX(2px)}
-  .cta-blue  {background:rgba(59,127,245,.15);color:var(--bluel)}
-  .cta-gold  {background:rgba(245,166,35,.15);color:var(--goldl)}
-  .cta-purple{background:rgba(155,107,250,.15);color:var(--purplel)}
-  .cta-teal  {background:rgba(15,196,212,.15);color:var(--teall)}
+  .cb-cta:hover{opacity:.85;transform:translateX(3px)}
+  .ct-cyan  {background:rgba(0,196,240,.12);color:var(--cyanl)}
+  .ct-gold  {background:rgba(245,197,24,.14);color:var(--goldl)}
+  .ct-white {background:rgba(255,255,255,.07);color:rgba(255,255,255,.8)}
+  .ct-mixed {background:linear-gradient(90deg,rgba(0,196,240,.14),rgba(245,197,24,.10));color:var(--cyanl)}
 
-  /* ═══ INSTAGRAM BUTTON ═════════════════════════════════════════ */
+  /* ── instagram btn ── */
   .ig-btn{
     width:100%;
-    display:flex;align-items:center;justify-content:center;gap:11px;
-    padding:18px 24px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:17px 24px;
     background:linear-gradient(110deg,#833ab4 0%,#e1306c 45%,#f77737 100%);
-    border-radius:18px;
-    font-size:15px;font-weight:800;
-    color:#fff;
-    letter-spacing:.2px;
+    border-radius:16px;
+    font-size:14.5px;font-weight:700;color:#fff;letter-spacing:.2px;
     cursor:pointer;
-    transition:transform .22s ease,box-shadow .22s ease,opacity .22s ease;
-    opacity:0;
-    animation:riseIn .5s cubic-bezier(.4,0,.2,1) .38s forwards;
+    transition:transform .22s,box-shadow .22s,opacity .22s;
+    opacity:0;animation:up .45s cubic-bezier(.4,0,.2,1) .38s forwards;
   }
-  .ig-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 14px 48px rgba(236,72,153,.35);
-    opacity:.92;
-  }
-  .ig-btn:active{transform:translateY(-1px) scale(.99)}
-  .ig-btn i{font-size:18px}
+  .ig-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(225,48,108,.32);opacity:.92}
+  .ig-btn:active{transform:scale(.99)}
+  .ig-btn i{font-size:17px}
 
-  /* ═══ FOOTER ═══════════════════════════════════════════════════ */
-  .footer{
-    margin-top:48px;
-    font-size:11.5px;
-    color:rgba(255,255,255,.12);
-    text-align:center;
-    line-height:2;
-  }
+  /* ── footer ── */
+  .footer{margin-top:44px;font-size:11px;color:rgba(255,255,255,.12);text-align:center;line-height:2}
   .footer a{color:rgba(255,255,255,.2);transition:color .2s}
-  .footer a:hover{color:rgba(255,255,255,.45)}
+  .footer a:hover{color:var(--cyan)}
 
-  /* ═══ RESPONSIVE ════════════════════════════════════════════════ */
-  @media(max-width:480px){
+  @media(max-width:440px){
     .wrap{padding:0 14px}
-    .hero-name{font-size:clamp(44px,13vw,60px)}
-    .card-body{padding:18px 18px 16px}
-    .card-title{font-size:16px}
+    .hero-name{font-size:clamp(50px,14vw,70px)}
+    .cb{padding:16px 16px 14px}
+    .cb-title{font-size:18px}
   }
   </style>
 </head>
 <body>
 
-  <!-- animated bg -->
-  <div class="orbs" aria-hidden="true">
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- ── TOP BAR ── -->
-    <div class="topbar">
-      <span class="monogram">C · Z</span>
-      <a class="ig-follow"
-         href="https://instagram.com/carloseduardooficial"
-         target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i> Seguir
-      </a>
+  <!-- topbar -->
+  <div class="topbar">
+    <div class="brand-mark">
+      <div class="brand-z">Z</div>
+      <span class="brand-name">Zavele</span>
     </div>
-
-    <!-- ── HERO ── -->
-    <div class="hero">
-      <div class="hero-avatar">
-        <img
-          src="https://unavatar.io/instagram/carloseduardooficial"
-          alt="Carlos Zavele"
-          loading="eager"
-          onerror="this.style.display='none'"
-        />
-      </div>
-      <div class="hero-eyebrow">Links Úteis</div>
-      <div class="hero-name">Carlos<br/>Zavele</div>
-      <div class="hero-underline"></div>
-      <p class="hero-bio">
-        Especialista em Dropshipping sem Estoque.<br/>
-        Ajudo empreendedores a construírem marcas que
-        faturam <strong>70K a 200K por mês</strong>.
-      </p>
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-val" style="color:var(--bluel)">+100K</span>
-          <span class="stat-lbl">Seguidores</span>
-        </div>
-        <div class="stat">
-          <span class="stat-val" style="color:var(--goldl)">+500</span>
-          <span class="stat-lbl">Alunos</span>
-        </div>
-        <div class="stat">
-          <span class="stat-val" style="color:var(--purplel)">200K/mês</span>
-          <span class="stat-lbl">Faturamento</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── DIVIDER ── -->
-    <div class="divider">
-      <div class="divider-line"></div>
-      <span class="divider-label">Escolha seu próximo passo</span>
-      <div class="divider-line"></div>
-    </div>
-
-    <!-- ── CARDS ── -->
-    <div class="cards">
-
-      <!-- 01 · Guia Dropshipping -->
-      <a class="card card-blue"
-         href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid"
-         target="_blank" rel="noopener noreferrer">
-        <div class="card-strip strip-blue"></div>
-        <div class="card-body">
-          <div class="card-head">
-            <div class="card-icon-wrap iw-blue">🚀</div>
-            <span class="card-badge b-blue">⚡ Mais Vendido</span>
-          </div>
-          <div>
-            <div class="card-title">Guia Destravar das Vendas</div>
-            <div class="card-desc" style="margin-top:6px">
-              Guia completo para fazer 1K por dia com Dropshipping — do zero ao primeiro pedido.
-            </div>
-          </div>
-          <div class="card-price">R$27<span>,00</span></div>
-          <span class="card-cta cta-blue">
-            Garantir minha vaga <i class="fas fa-arrow-right" style="font-size:12px"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- 02 · Mentoria Marca Milionária -->
-      <a class="card card-gold"
-         href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/"
-         target="_blank" rel="noopener noreferrer">
-        <div class="card-strip strip-gold"></div>
-        <div class="card-body">
-          <div class="card-head">
-            <div class="card-icon-wrap iw-gold">👑</div>
-            <span class="card-badge b-gold">🏆 Premium</span>
-          </div>
-          <div>
-            <div class="card-title">Mentoria Marca Milionária</div>
-            <div class="card-desc" style="margin-top:6px">
-              Descubra como ir do zero aos <strong style="color:var(--goldl)">100.000/mês</strong> sem estoque — método comprovado em grupo.
-            </div>
-          </div>
-          <span class="card-cta cta-gold">
-            Fazer inscrição <i class="fas fa-arrow-right" style="font-size:12px"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- 03 · Mentoria Individual -->
-      <a class="card card-purple"
-         href="https://carloseduardooficial.com.br/carlos-mentoria-individual/"
-         target="_blank" rel="noopener noreferrer">
-        <div class="card-strip strip-purple"></div>
-        <div class="card-body">
-          <div class="card-head">
-            <div class="card-icon-wrap iw-purple">💎</div>
-            <span class="card-badge b-purple">🔒 Vagas Limitadas</span>
-          </div>
-          <div>
-            <div class="card-title">Mentoria Individual</div>
-            <div class="card-desc" style="margin-top:6px">
-              Suporte 1-a-1 direto com o Carlos para construir uma marca de
-              <strong style="color:var(--purplel)">70K a 200K/mês</strong>.
-              Aplique enquanto há vagas.
-            </div>
-          </div>
-          <span class="card-cta cta-purple">
-            Quero aplicar <i class="fas fa-arrow-right" style="font-size:12px"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- 04 · ZaveleMídia -->
-      <a class="card card-teal"
-         href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid"
-         target="_blank" rel="noopener noreferrer">
-        <div class="card-strip strip-teal"></div>
-        <div class="card-body">
-          <div class="card-head">
-            <div class="card-icon-wrap iw-teal">📊</div>
-            <span class="card-badge b-teal">🎯 Agência</span>
-          </div>
-          <div>
-            <div class="card-title">ZaveleMídia</div>
-            <div class="card-desc" style="margin-top:6px">
-              Gestão de Tráfego e Marketing Digital para escalar sua marca. Contrate nossa agência especializada.
-            </div>
-          </div>
-          <span class="card-cta cta-teal">
-            Contratar serviços <i class="fas fa-arrow-right" style="font-size:12px"></i>
-          </span>
-        </div>
-      </a>
-
-    </div><!-- /cards -->
-
-    <!-- ── INSTAGRAM ── -->
-    <a class="ig-btn"
+    <a class="ig-follow"
        href="https://instagram.com/carloseduardooficial"
+       target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i> Seguir
+    </a>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <div class="av-wrap">
+      <img src="https://unavatar.io/instagram/carloseduardooficial"
+           alt="Carlos Zavele" loading="eager"
+           onerror="this.parentElement.style.background='var(--cyan)';this.style.display='none'"/>
+    </div>
+    <div class="hero-label">Links Úteis</div>
+    <div class="hero-name">Carlos<br/><span class="hl">Zavele</span></div>
+    <div class="cyan-line"></div>
+    <p class="hero-bio">
+      Especialista em Dropshipping sem Estoque.<br/>
+      Ajudo empreendedores a construírem marcas que faturam
+      <strong>70K a 200K por mês</strong>.
+    </p>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-val" style="color:var(--cyan)">+100K</span>
+        <span class="stat-lbl">Seguidores</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val" style="color:var(--goldl)">+500</span>
+        <span class="stat-lbl">Alunos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val" style="color:var(--cyanl)">200K/mês</span>
+        <span class="stat-lbl">Faturamento</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- divider -->
+  <div class="divider">
+    <div class="div-line"></div>
+    <span class="div-label">Escolha seu próximo passo</span>
+    <div class="div-line"></div>
+  </div>
+
+  <!-- cards -->
+  <div class="cards">
+
+    <!-- 1 · Guia -->
+    <a class="card card-gold"
+       href="https://inlead.digital/destravar-das-vendas/?fbclid=fbclid"
        target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i>
-      Voltar para o Instagram
+      <div class="strip s-gold"></div>
+      <div class="cb">
+        <div class="cb-head">
+          <div class="cb-icon ic-gold">🚀</div>
+          <span class="cb-badge bg-gold">⚡ Mais Vendido</span>
+        </div>
+        <div class="cb-title">Guia Destravar das Vendas</div>
+        <div class="cb-desc">Guia completo para fazer 1K por dia com Dropshipping — do zero ao primeiro pedido.</div>
+        <div class="cb-price">R$27<small>,00</small></div>
+        <span class="cb-cta ct-gold">Garantir minha vaga <i class="fas fa-arrow-right" style="font-size:11px"></i></span>
+      </div>
     </a>
 
-    <footer class="footer">
-      © 2025 Carlos Zavele · Todos os direitos reservados<br/>
-      <a href="/">carloseduardooficial.com.br</a>
-    </footer>
+    <!-- 2 · Mentoria MM -->
+    <a class="card card-cyan"
+       href="https://carloseduardooficial.com.br/mentoria-acelerar-dropshipping/"
+       target="_blank" rel="noopener noreferrer">
+      <div class="strip s-cyan"></div>
+      <div class="cb">
+        <div class="cb-head">
+          <div class="cb-icon ic-cyan">👑</div>
+          <span class="cb-badge bg-cyan">🏆 Premium</span>
+        </div>
+        <div class="cb-title">Mentoria Marca Milionária</div>
+        <div class="cb-desc">Do zero aos <strong style="color:var(--cyanl)">100.000/mês</strong> sem estoque — método comprovado em grupo.</div>
+        <span class="cb-cta ct-cyan">Fazer inscrição <i class="fas fa-arrow-right" style="font-size:11px"></i></span>
+      </div>
+    </a>
 
-  </div><!-- /wrap -->
+    <!-- 3 · Mentoria Individual -->
+    <a class="card card-mixed"
+       href="https://carloseduardooficial.com.br/carlos-mentoria-individual/"
+       target="_blank" rel="noopener noreferrer">
+      <div class="strip s-mixed"></div>
+      <div class="cb">
+        <div class="cb-head">
+          <div class="cb-icon ic-mixed">💎</div>
+          <span class="cb-badge bg-mixed">🔒 Vagas Limitadas</span>
+        </div>
+        <div class="cb-title">Mentoria Individual</div>
+        <div class="cb-desc">Suporte 1-a-1 direto com o Carlos. Construa uma marca de <strong style="color:var(--goldl)">70K a 200K/mês</strong>.</div>
+        <span class="cb-cta ct-mixed">Quero aplicar <i class="fas fa-arrow-right" style="font-size:11px"></i></span>
+      </div>
+    </a>
+
+    <!-- 4 · ZaveleMídia -->
+    <a class="card card-white"
+       href="https://carloseduardooficial.com.br/carlos-eduardo-vsl-p2/?fbclid=fbclid"
+       target="_blank" rel="noopener noreferrer">
+      <div class="strip s-white"></div>
+      <div class="cb">
+        <div class="cb-head">
+          <div class="cb-icon ic-white">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--cyan)">Z</span>
+          </div>
+          <span class="cb-badge bg-white">🎯 Agência</span>
+        </div>
+        <div class="cb-title">ZaveleMídia</div>
+        <div class="cb-desc">Gestão de Tráfego e Marketing Digital. Contrate nossa agência para escalar sua marca.</div>
+        <span class="cb-cta ct-white">Contratar serviços <i class="fas fa-arrow-right" style="font-size:11px"></i></span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- instagram -->
+  <a class="ig-btn"
+     href="https://instagram.com/carloseduardooficial"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+    Voltar para o Instagram
+  </a>
+
+  <footer class="footer">
+    © 2025 Carlos Zavele · Todos os direitos reservados<br/>
+    <a href="/">carloseduardooficial.com.br</a>
+  </footer>
+
+</div>
 </body>
 </html>
