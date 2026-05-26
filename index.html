@@ -142,6 +142,14 @@
     background:radial-gradient(ellipse,rgba(155,107,250,.12) 0%,transparent 70%);
     pointer-events:none;
   }
+  .hc-photo{
+    width:72px;height:72px;
+    border-radius:18px;
+    object-fit:cover;
+    margin-bottom:18px;
+    position:relative;z-index:1;
+    border:2px solid rgba(255,255,255,.08);
+  }
   .hc-monogram{
     font-family:'Syne',sans-serif;
     font-size:36px;font-weight:800;
@@ -149,6 +157,7 @@
     -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
     line-height:1;margin-bottom:22px;
     position:relative;z-index:1;
+    display:none; /* hidden when photo loads */
   }
   .hc-name{font-size:20px;font-weight:800;margin-bottom:4px;position:relative;z-index:1}
   .hc-role{font-size:13px;color:var(--muted);margin-bottom:24px;position:relative;z-index:1}
@@ -380,6 +389,13 @@
 
       <div>
         <div class="hero-card">
+          <img
+            class="hc-photo"
+            src="https://unavatar.io/instagram/carloseduardooficial"
+            alt="Carlos Zavele"
+            loading="eager"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+          />
           <div class="hc-monogram">CZ</div>
           <div class="hc-name">Carlos Zavele</div>
           <div class="hc-role">@carloseduardooficial · Dropshipping Expert</div>
