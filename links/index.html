@@ -313,11 +313,38 @@
   .footer a{color:rgba(255,255,255,.2);transition:color .2s}
   .footer a:hover{color:var(--cyan)}
 
-  @media(max-width:440px){
+  /* ── PHONES (≤ 480px) ──────────────────────────────────── */
+  @media(max-width:480px){
     .wrap{padding:0 14px}
-    .hero-name{font-size:clamp(50px,14vw,70px)}
-    .cb{padding:16px 16px 14px}
+    .topbar{padding:20px 0 0;margin-bottom:32px}
+    .av-wrap{width:70px;height:70px;margin-bottom:16px}
+    .hero{margin-bottom:36px}
+    .hero-name{font-size:clamp(50px,13vw,72px)}
+    .hero-bio{font-size:14px;margin-bottom:22px}
+    .stats{gap:7px}
+    .stat{padding:9px 13px}
+    .stat-val{font-size:15px}
+    .divider{margin:0 0 16px}
+    .cards{gap:10px}
+    .cb{padding:16px 16px 14px;gap:10px}
     .cb-title{font-size:18px}
+    .cb-desc{font-size:12.5px}
+    .cb-price{font-size:24px}
+    .cb-cta{padding:12px 14px;font-size:13px}
+    .ig-btn{padding:15px 20px;font-size:14px}
+  }
+
+  /* ── SMALL PHONES (≤ 360px) ─────────────────────────────── */
+  @media(max-width:360px){
+    .wrap{padding:0 12px}
+    .topbar{margin-bottom:24px}
+    .hero-name{font-size:clamp(42px,12vw,60px)}
+    .hero-bio{font-size:13.5px}
+    .stats{flex-direction:column;gap:6px}
+    .stat{flex-direction:row;justify-content:space-between;align-items:center;padding:10px 14px}
+    .stat-lbl{font-size:9.5px}
+    .div-label{font-size:9px;letter-spacing:1.5px}
+    .brand-name{display:none}
   }
   </style>
 </head>

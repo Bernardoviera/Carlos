@@ -395,6 +395,72 @@
   .rev{opacity:0;transform:translateY(20px);
     transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
   .rev.on{opacity:1;transform:none}
+
+  /* ── TABLET (≤ 768px) ──────────────────────────────────── */
+  @media(max-width:768px){
+    .hero{padding:80px 5% 52px}
+    .hero-inner{gap:36px}
+    .section{padding:64px 5%}
+    .cta-band{padding:64px 5%}
+    footer{padding:36px 5% 28px}
+    .ft-top{flex-direction:column;align-items:flex-start;gap:20px}
+    .ft-links{gap:16px}
+    .pc-banner{height:190px}
+    .prod-grid{grid-template-columns:1fr}
+  }
+
+  /* ── PHONES (≤ 480px) ──────────────────────────────────── */
+  @media(max-width:480px){
+    /* nav */
+    nav{padding:13px 4%}
+
+    /* hero */
+    .hero{padding:70px 4% 44px}
+    .hero-inner{gap:24px}
+    .hero-tag{margin-bottom:16px}
+    .hero-h1{font-size:clamp(36px,10vw,54px);letter-spacing:-.3px;margin-bottom:18px}
+    .hero-sub{font-size:14px;margin-bottom:28px}
+    .hero-btns{flex-direction:column;gap:10px}
+    .btn-cyan,.btn-outline{width:100%;justify-content:center;padding:14px 20px}
+    .hero-trust{gap:8px;padding-top:24px}
+    .trust-sep{display:none}
+    .trust-val{font-size:19px}
+    .profile-card{max-width:100%}
+    .pc-photo-area{height:220px}
+
+    /* sections */
+    .section{padding:48px 4%}
+    .prod-header{flex-direction:column;gap:12px;margin-bottom:28px}
+    .sec-h2{font-size:clamp(26px,8vw,38px)}
+    .pc-banner{height:170px}
+    .pc-body{padding:16px 16px 18px;gap:10px}
+    .pc-title{font-size:17px}
+    .pc-cta{padding:12px 14px;font-size:13px}
+
+    /* sobre */
+    .sobre-grid{gap:32px}
+    .sv-photo{height:180px}
+    .sv-body{padding:16px 18px 20px}
+    .sv-val{font-size:22px}
+
+    /* cta band */
+    .cta-band{padding:52px 4%}
+    .cta-btns{flex-direction:column;gap:10px;width:100%}
+    .cta-btns .btn-cyan,.cta-btns .btn-outline{width:100%;justify-content:center}
+
+    /* footer */
+    footer{padding:32px 4% 24px}
+    .ft-links{display:none}
+  }
+
+  /* ── SMALL PHONES (≤ 360px) ─────────────────────────────── */
+  @media(max-width:360px){
+    .hero{padding:66px 3.5% 36px}
+    .hero-h1{font-size:clamp(32px,9.5vw,44px)}
+    .hero-trust{flex-wrap:wrap;justify-content:flex-start}
+    .trust-stat{flex:1;min-width:80px}
+    .pc-banner{height:150px}
+  }
   </style>
 </head>
 <body>
