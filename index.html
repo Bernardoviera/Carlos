@@ -361,19 +361,20 @@
   .sobre-quote{font-family:'Barlow Condensed',sans-serif;
     font-size:clamp(21px,2.5vw,28px);font-weight:700;font-style:italic;line-height:1.35;
     color:var(--text);border-left:3px solid var(--cyan);padding-left:20px;margin:0 0 24px}
-  .sobre-bio{font-size:15px;color:var(--muted);line-height:1.78;margin-bottom:32px}
-  .creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
-  .cred-card{background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:16px;
-    padding:16px;display:flex;flex-direction:column;gap:8px;
-    transition:border-color .2s,background .2s}
-  .cred-card:hover{background:rgba(0,196,240,.04);border-color:rgba(0,196,240,.22)}
-  .cred-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;
+  .sobre-bio{font-size:15px;color:var(--muted);line-height:1.78;margin-bottom:28px}
+
+  .creds-list{display:flex;flex-direction:column;margin-bottom:32px}
+  .cred-row{display:flex;align-items:center;gap:16px;padding:15px 0;
+    border-bottom:1px solid var(--bdr)}
+  .cred-row:first-child{border-top:1px solid var(--bdr)}
+  .cred-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;
     justify-content:center;font-size:14px;flex-shrink:0}
-  .ci-cyan{background:rgba(0,196,240,.1);color:var(--cyan)}
-  .ci-gold{background:rgba(245,197,24,.1);color:var(--gold)}
-  .cred-num{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;
-    line-height:1;letter-spacing:-.5px}
-  .cred-label{font-size:12px;color:var(--muted);line-height:1.45}
+  .ci-cyan{background:rgba(0,196,240,.08);color:var(--cyan)}
+  .ci-gold{background:rgba(245,197,24,.08);color:var(--gold)}
+  .cred-text{display:flex;flex-direction:column;gap:2px}
+  .cred-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;
+    line-height:1;letter-spacing:-.2px}
+  .cred-desc{font-size:12.5px;color:var(--muted);line-height:1.4}
   .sobre-btns{display:flex;gap:12px;flex-wrap:wrap}
 
   @media(max-width:860px){
@@ -465,8 +466,7 @@
     .sfb{min-width:64px;padding:8px 10px}
     .sfb-v{font-size:17px}
     .sobre-quote{font-size:clamp(18px,5vw,22px)}
-    .creds-grid{gap:10px}
-    .cred-num{font-size:24px}
+    .cred-val{font-size:20px}
     .sobre-btns{flex-direction:column}
     .sobre-btns .btn-cyan,.sobre-btns .btn-outline{width:100%;justify-content:center}
 
@@ -764,26 +764,34 @@
           "Do zero ao digital: criei um método de vendas sem estoque que já transformou centenas de vidas."
         </blockquote>
         <p class="sobre-bio">Empreendedor digital especializado em Dropshipping sem estoque e fundador da ZaveleMídia — agência de tráfego pago e marketing digital. Com mais de 500 alunos formados e resultados que chegam a 200K por mês, Carlos construiu um ecossistema completo de cursos e mentorias para quem quer escalar do zero ao 6 dígitos.</p>
-        <div class="creds-grid">
-          <div class="cred-card">
-            <div class="cred-icon ci-cyan"><i class="fas fa-users"></i></div>
-            <div class="cred-num" style="color:var(--cyan)">+500</div>
-            <div class="cred-label">Alunos com resultados comprovados</div>
+        <div class="creds-list">
+          <div class="cred-row">
+            <div class="cred-ico ci-cyan"><i class="fas fa-users"></i></div>
+            <div class="cred-text">
+              <span class="cred-val" style="color:var(--cyan)">+500 Alunos Formados</span>
+              <span class="cred-desc">Comunidade ativa aplicando o método com resultados reais</span>
+            </div>
           </div>
-          <div class="cred-card">
-            <div class="cred-icon ci-gold"><i class="fas fa-chart-line"></i></div>
-            <div class="cred-num" style="color:var(--goldl)">200K</div>
-            <div class="cred-label">Faturamento máx./mês dos alunos</div>
+          <div class="cred-row">
+            <div class="cred-ico ci-gold"><i class="fas fa-chart-line"></i></div>
+            <div class="cred-text">
+              <span class="cred-val" style="color:var(--goldl)">Até 200K/mês nos Alunos</span>
+              <span class="cred-desc">Faturamento máximo alcançado pelos alunos mais avançados</span>
+            </div>
           </div>
-          <div class="cred-card">
-            <div class="cred-icon ci-cyan"><i class="fab fa-instagram"></i></div>
-            <div class="cred-num" style="color:var(--cyan)">+100K</div>
-            <div class="cred-label">Seguidores no Instagram</div>
+          <div class="cred-row">
+            <div class="cred-ico ci-cyan"><i class="fab fa-instagram"></i></div>
+            <div class="cred-text">
+              <span class="cred-val" style="color:var(--cyan)">+100K Seguidores</span>
+              <span class="cred-desc">Presença digital ativa e crescente no Instagram</span>
+            </div>
           </div>
-          <div class="cred-card">
-            <div class="cred-icon ci-gold"><i class="fas fa-store"></i></div>
-            <div class="cred-num" style="color:var(--goldl)">4</div>
-            <div class="cred-label">Produtos e mentorias no portfólio</div>
+          <div class="cred-row">
+            <div class="cred-ico ci-gold"><i class="fas fa-store"></i></div>
+            <div class="cred-text">
+              <span class="cred-val" style="color:var(--goldl)">4 Produtos no Portfólio</span>
+              <span class="cred-desc">Do guia introdutório à agência completa de tráfego pago</span>
+            </div>
           </div>
         </div>
         <div class="sobre-btns">
