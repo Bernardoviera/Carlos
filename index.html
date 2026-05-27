@@ -97,10 +97,10 @@
   }
   .h1-w{color:var(--text)}
   .h1-c{color:var(--cyan)}
-  .h1-g{color:var(--gold)}
+  .h1-g{color:var(--cyan)}
 
   .hero-sub{font-size:15.5px;color:var(--muted);line-height:1.8;margin-bottom:36px;max-width:420px}
-  .hero-sub strong{color:var(--goldl)}
+  .hero-sub strong{color:var(--cyanl)}
 
   .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
   .btn-cyan{
@@ -120,7 +120,7 @@
     padding-top:32px;border-top:1px solid var(--bdr);
   }
   .trust-stat{display:flex;flex-direction:column;gap:2px}
-  .trust-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;letter-spacing:-.3px}
+  .trust-val{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.3px}
   .trust-lbl{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;font-weight:600}
   .trust-sep{width:1px;height:36px;background:var(--bdr)}
 
@@ -137,7 +137,7 @@
   /* cyan top line */
   .profile-card::before{
     content:'';position:absolute;top:0;left:0;right:0;height:2px;
-    background:linear-gradient(90deg,var(--cyan),var(--gold));z-index:1;
+    background:linear-gradient(90deg,var(--cyan),var(--cyand));z-index:1;
   }
 
   /* photo area */
@@ -196,7 +196,7 @@
     transition:border-color .2s;
   }
   .pc-stat:hover{border-color:rgba(0,196,240,.2)}
-  .pc-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.3px;line-height:1}
+  .pc-stat-val{font-family:'Inter',sans-serif;font-size:17px;font-weight:800;letter-spacing:-.3px;line-height:1}
   .pc-stat-lbl{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600;margin-top:3px}
 
   @media(max-width:900px){
@@ -270,7 +270,7 @@
   /* decorative glow (só no fallback) */
   .ban-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
   .ban-deco::before{content:'';position:absolute;border-radius:50%;filter:blur(50px);opacity:.3}
-  .ban-deco-1::before{width:160px;height:160px;top:-20px;right:-10px;background:var(--gold)}
+  .ban-deco-1::before{width:160px;height:160px;top:-20px;right:-10px;background:var(--cyan)}
   .ban-deco-2::before{width:160px;height:160px;top:-20px;right:-10px;background:var(--cyan)}
   .ban-deco-3::before{width:160px;height:160px;top:-20px;right:-10px;background:#9b6bfa}
   .ban-deco-4::before{width:160px;height:160px;top:-20px;right:-10px;background:var(--cyan)}
@@ -283,8 +283,8 @@
   }
 
   .ban-metric{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:42px;font-weight:800;letter-spacing:-1px;line-height:1;
+    font-family:'Inter',sans-serif;
+    font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1;
     position:relative;z-index:1;
   }
   .ban-meta-label{
@@ -318,13 +318,13 @@
     margin-top:4px;
   }
   .pc-cta:hover{opacity:.85;transform:translateX(3px)}
-  .pct-gold{background:rgba(245,197,24,.12);color:var(--goldl)}
+  .pct-gold{background:rgba(0,196,240,.12);color:var(--cyanl)}
   .pct-cyan{background:rgba(0,196,240,.12);color:var(--cyanl)}
   .pct-mix {background:linear-gradient(90deg,rgba(0,196,240,.1),rgba(155,107,250,.1));color:var(--cyanl)}
   .pct-w   {background:rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
 
   /* hover border colors */
-  .pc-gold:hover  {border-color:rgba(245,197,24,.3);box-shadow:0 14px 48px rgba(245,197,24,.12)}
+  .pc-gold:hover  {border-color:rgba(0,196,240,.3);box-shadow:0 14px 48px rgba(0,196,240,.14)}
   .pc-cyan:hover  {border-color:rgba(0,196,240,.3);box-shadow:0 14px 48px rgba(0,196,240,.14)}
   .pc-purple:hover{border-color:rgba(155,107,250,.3);box-shadow:0 14px 48px rgba(155,107,250,.10)}
   .pc-teal:hover  {border-color:rgba(0,196,240,.2);box-shadow:0 14px 48px rgba(0,196,240,.10)}
@@ -370,7 +370,7 @@
   .cred-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;
     justify-content:center;font-size:14px;flex-shrink:0}
   .ci-cyan{background:rgba(0,196,240,.08);color:var(--cyan)}
-  .ci-gold{background:rgba(245,197,24,.08);color:var(--gold)}
+  .ci-gold{background:rgba(0,196,240,.08);color:var(--cyan)}
   .cred-text{display:flex;flex-direction:column;gap:2px}
   .cred-val{font-family:'Inter',sans-serif;font-size:15px;font-weight:700;
     line-height:1;letter-spacing:-.1px}
@@ -542,7 +542,7 @@
         </div>
         <div class="trust-sep"></div>
         <div class="trust-stat">
-          <span class="trust-val" style="color:var(--goldl)">+500</span>
+          <span class="trust-val" style="color:var(--cyanl)">+500</span>
           <span class="trust-lbl">Alunos</span>
         </div>
         <div class="trust-sep"></div>
@@ -580,7 +580,7 @@
               <div class="pc-stat-lbl">Seguidores</div>
             </div>
             <div class="pc-stat">
-              <div class="pc-stat-val" style="color:var(--goldl)">+500</div>
+              <div class="pc-stat-val" style="color:var(--cyanl)">+500</div>
               <div class="pc-stat-lbl">Alunos</div>
             </div>
             <div class="pc-stat">
@@ -623,8 +623,8 @@
           <div class="ban-1">
             <div class="ban-deco ban-deco-1"></div>
             <div class="pc-banner-bg">
-              <div class="ban-metric" style="color:var(--goldl)">R$27</div>
-              <div class="ban-meta-label" style="color:var(--goldl)">Guia Completo · Dropshipping</div>
+              <div class="ban-metric" style="color:var(--cyan)">R$27</div>
+              <div class="ban-meta-label" style="color:var(--cyanl)">Guia Completo · Dropshipping</div>
             </div>
           </div>
         </div>
@@ -809,7 +809,7 @@
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="cta-inner">
-    <div class="sec-tag" style="color:var(--goldl)">Comece Agora</div>
+    <div class="sec-tag" style="color:var(--cyan)">Comece Agora</div>
     <h2 class="sec-h2">Pronto para sua<br/><span style="color:var(--cyan)">Marca Milionária?</span></h2>
     <p class="sec-sub" style="text-align:center">Escolha o produto certo para o seu momento e dê o próximo passo agora.</p>
     <div class="cta-btns">
