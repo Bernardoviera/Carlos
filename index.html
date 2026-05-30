@@ -222,118 +222,6 @@
     margin-bottom:12px;color:var(--text)}
   .sec-sub{font-size:15px;color:var(--muted);line-height:1.75;max-width:480px}
 
-  /* ─── DOR / PROBLEMA ───────────────────────────────────── */
-  #dor{background:var(--bg)}
-  .dor-header{text-align:center;margin-bottom:56px}
-  .dor-header .sec-h2{margin-bottom:12px}
-  .dor-header .sec-sub{margin:0 auto;text-align:center}
-
-  .dor-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-bottom:64px;
-  }
-  @media(max-width:860px){.dor-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.dor-grid{grid-template-columns:1fr}}
-
-  .dor-card{
-    background:var(--card);
-    border:1px solid var(--bdr);
-    border-radius:20px;
-    padding:28px 24px;
-    display:flex;flex-direction:column;gap:14px;
-    position:relative;overflow:hidden;
-    transition:border-color .25s,transform .25s;
-  }
-  .dor-card::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:2px;
-    background:linear-gradient(90deg,rgba(255,80,80,.6),rgba(255,80,80,.1));
-  }
-  .dor-card:hover{border-color:rgba(255,80,80,.25);transform:translateY(-4px)}
-  .dor-ico{
-    width:44px;height:44px;border-radius:12px;
-    background:rgba(255,80,80,.08);
-    display:flex;align-items:center;justify-content:center;
-    font-size:18px;color:#ff6b6b;flex-shrink:0;
-  }
-  .dor-title{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;
-    color:var(--text);line-height:1.2}
-  .dor-desc{font-size:13.5px;color:var(--muted);line-height:1.65}
-
-  /* transition arrow */
-  .dor-solution{
-    text-align:center;
-    padding:44px 20px;
-    background:linear-gradient(160deg,rgba(0,196,240,.05),rgba(0,196,240,.02));
-    border:1px solid rgba(0,196,240,.12);
-    border-radius:24px;
-    display:flex;flex-direction:column;align-items:center;gap:16px;
-  }
-  .dor-solution-icon{
-    width:64px;height:64px;border-radius:50%;
-    background:rgba(0,196,240,.1);
-    display:flex;align-items:center;justify-content:center;
-    font-size:26px;color:var(--cyan);
-    border:1px solid rgba(0,196,240,.2);
-  }
-  .dor-solution h3{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(22px,3.5vw,30px);font-weight:800;
-    color:var(--text);text-align:center;text-transform:uppercase;
-    letter-spacing:-.2px;line-height:1.1;
-  }
-  .dor-solution h3 span{color:var(--cyan)}
-  .dor-solution p{font-size:15px;color:var(--muted);line-height:1.75;max-width:500px}
-
-  /* ─── DEPOIMENTOS ───────────────────────────────────────── */
-  #depoimentos{background:var(--bg2)}
-  .dep-header{text-align:center;max-width:540px;margin:0 auto 52px}
-  .dep-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-  }
-  @media(max-width:900px){.dep-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:580px){.dep-grid{grid-template-columns:1fr}}
-
-  .dep-card{
-    background:var(--card);border:1px solid var(--bdr);
-    border-radius:20px;padding:26px 22px 22px;
-    display:flex;flex-direction:column;gap:16px;
-    position:relative;overflow:hidden;
-    transition:border-color .25s,transform .25s;
-  }
-  .dep-card:hover{border-color:rgba(0,196,240,.2);transform:translateY(-4px)}
-  .dep-card::before{
-    content:'\201C';position:absolute;top:10px;right:18px;
-    font-size:80px;font-weight:700;color:rgba(0,196,240,.07);line-height:1;
-    font-family:Georgia,serif;
-  }
-
-  .dep-stars{display:flex;gap:3px;color:var(--gold);font-size:13px}
-  .dep-text{font-size:14px;color:var(--muted);line-height:1.75;flex:1;position:relative;z-index:1}
-  .dep-text strong{color:var(--cyanl)}
-
-  .dep-result{
-    display:inline-flex;align-items:center;gap:6px;
-    background:rgba(0,196,240,.08);border:1px solid rgba(0,196,240,.15);
-    border-radius:8px;padding:6px 12px;
-    font-size:12px;font-weight:700;color:var(--cyanl);
-    width:fit-content;
-  }
-
-  .dep-author{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--bdr)}
-  .dep-avatar{
-    width:40px;height:40px;border-radius:50%;
-    background:rgba(0,196,240,.1);border:1px solid rgba(0,196,240,.2);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--cyan);
-    flex-shrink:0;
-  }
-  .dep-name{font-size:13.5px;font-weight:700;color:var(--text);line-height:1.2}
-  .dep-role{font-size:11.5px;color:var(--muted);margin-top:2px}
-
   /* ─── PRODUTOS ──────────────────────────────────────────── */
   #produtos{background:var(--bg2)}
   .prod-header{display:flex;justify-content:space-between;align-items:flex-end;
@@ -620,7 +508,6 @@
   </div>
   <div class="nav-right">
     <a href="#produtos" class="nav-link">Produtos</a>
-    <a href="#depoimentos" class="nav-link">Resultados</a>
     <a href="#sobre" class="nav-link">Sobre</a>
     <a href="/links/" class="nav-cta">
       <i class="fas fa-rocket" style="font-size:11px"></i> Links Úteis
@@ -710,66 +597,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- DOR / PROBLEMA -->
-<section class="section" id="dor">
-  <div class="si">
-    <div class="dor-header rev">
-      <div class="sec-tag">O Problema</div>
-      <h2 class="sec-h2">Você se identifica<br/>com alguma disso?</h2>
-      <p class="sec-sub">A maioria das pessoas que quer empreender online trava nesses mesmos obstáculos. Você não está sozinho.</p>
-    </div>
-
-    <div class="dor-grid">
-
-      <div class="dor-card rev" style="transition-delay:.04s">
-        <div class="dor-ico"><i class="fas fa-boxes"></i></div>
-        <div class="dor-title">Medo de ter estoque parado</div>
-        <div class="dor-desc">Investir em produtos que não vendem e ficar com dinheiro preso é o maior freio para quem quer começar.</div>
-      </div>
-
-      <div class="dor-card rev" style="transition-delay:.08s">
-        <div class="dor-ico"><i class="fas fa-dollar-sign"></i></div>
-        <div class="dor-title">Não tenho capital inicial</div>
-        <div class="dor-desc">Parece impossível montar um negócio do zero sem dinheiro. Mas é exatamente aí que o Dropshipping muda o jogo.</div>
-      </div>
-
-      <div class="dor-card rev" style="transition-delay:.12s">
-        <div class="dor-ico"><i class="fas fa-clock"></i></div>
-        <div class="dor-title">Sem tempo para um segundo negócio</div>
-        <div class="dor-desc">Trabalho, família, compromissos — parece que não sobra tempo para montar uma renda extra consistente.</div>
-      </div>
-
-      <div class="dor-card rev" style="transition-delay:.16s">
-        <div class="dor-ico"><i class="fas fa-route"></i></div>
-        <div class="dor-title">Tentei e não funcionou</div>
-        <div class="dor-desc">Cursos que prometem muito e entregam pouco. Estratégias genéricas que não funcionam na prática real do mercado.</div>
-      </div>
-
-      <div class="dor-card rev" style="transition-delay:.20s">
-        <div class="dor-ico"><i class="fas fa-question-circle"></i></div>
-        <div class="dor-title">Não sei por onde começar</div>
-        <div class="dor-desc">Fornecedores, anúncios, loja virtual, logística — a quantidade de informação paralisa quem está começando.</div>
-      </div>
-
-      <div class="dor-card rev" style="transition-delay:.24s">
-        <div class="dor-ico"><i class="fas fa-map-signs"></i></div>
-        <div class="dor-title">Falta de orientação prática</div>
-        <div class="dor-desc">Conteúdo gratuito existe aos montes, mas sem um guia passo a passo testado, você perde tempo tentando sozinho.</div>
-      </div>
-
-    </div>
-
-    <div class="dor-solution rev">
-      <div class="dor-solution-icon"><i class="fas fa-lightbulb"></i></div>
-      <h3>A Solução é o <span>Dropshipping</span><br/>sem Estoque</h3>
-      <p>Venda sem ter produtos, sem logística, sem capital gigante. Com o método certo — testado por +500 alunos — você escala de 0 a 6 dígitos em meses, não em anos.</p>
-      <a href="#produtos" class="btn-cyan" style="margin-top:8px">
-        <i class="fas fa-arrow-down" style="font-size:12px"></i> Ver como funciona
-      </a>
-    </div>
   </div>
 </section>
 
@@ -897,111 +724,6 @@
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="section" id="depoimentos">
-  <div class="si">
-    <div class="dep-header rev">
-      <div class="sec-tag">Resultados Reais</div>
-      <h2 class="sec-h2">O que dizem<br/>os <span style="color:var(--cyan)">alunos</span></h2>
-      <p class="sec-sub" style="text-align:center">Mais de 500 alunos transformaram suas vidas. Aqui estão alguns deles.</p>
-    </div>
-
-    <div class="dep-grid">
-
-      <div class="dep-card rev" style="transition-delay:.04s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Em 3 meses aplicando o método do Carlos, saí do <strong>zero para R$47.000 de faturamento</strong>. Nunca achei que fosse possível sem ter estoque. O suporte da mentoria fez toda a diferença.</p>
-        <div class="dep-result"><i class="fas fa-chart-line" style="font-size:11px"></i> R$47K no 3º mês</div>
-        <div class="dep-author">
-          <div class="dep-avatar">GL</div>
-          <div>
-            <div class="dep-name">Gabriel Lima</div>
-            <div class="dep-role">Aluno da Mentoria Marca Milionária</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card rev" style="transition-delay:.09s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Comecei com o Guia de R$27 sem acreditar muito, mas o conteúdo me abriu os olhos. Em 6 meses já estava na <strong>Mentoria Individual faturando 110K/mês</strong>. Carlos é direto ao ponto.</p>
-        <div class="dep-result"><i class="fas fa-chart-line" style="font-size:11px"></i> R$110K/mês em 6 meses</div>
-        <div class="dep-author">
-          <div class="dep-avatar">JF</div>
-          <div>
-            <div class="dep-name">Julia Ferreira</div>
-            <div class="dep-role">Aluna da Mentoria Individual</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card rev" style="transition-delay:.14s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Trabalhava em CLT ganhando 2.800. Hoje, com Dropshipping sem estoque, tenho uma loja que fatura <strong>mais de 80K por mês</strong>. Pedi demissão no 4º mês. Valeu cada centavo investido.</p>
-        <div class="dep-result"><i class="fas fa-chart-line" style="font-size:11px"></i> Demissão no 4º mês</div>
-        <div class="dep-author">
-          <div class="dep-avatar">RM</div>
-          <div>
-            <div class="dep-name">Rafael Moura</div>
-            <div class="dep-role">Aluno da Mentoria Marca Milionária</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card rev" style="transition-delay:.04s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Já tinha tentado vender online antes e falhado. Com o método do Carlos entendi onde estava errando. <strong>No primeiro mês de mentoria fiz R$22.000</strong>. Método simples e sem enrolação.</p>
-        <div class="dep-result"><i class="fas fa-chart-line" style="font-size:11px"></i> R$22K no 1º mês</div>
-        <div class="dep-author">
-          <div class="dep-avatar">PS</div>
-          <div>
-            <div class="dep-name">Patricia Santos</div>
-            <div class="dep-role">Aluna do Guia + Mentoria</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card rev" style="transition-delay:.09s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Contratei a ZaveleMídia para gerir meu tráfego e os resultados foram surpreendentes. <strong>ROAS de 4.8 consistente</strong> por 3 meses consecutivos. Equipe extremamente profissional.</p>
-        <div class="dep-result"><i class="fas fa-bullseye" style="font-size:11px"></i> ROAS 4.8 consistente</div>
-        <div class="dep-author">
-          <div class="dep-avatar">TA</div>
-          <div>
-            <div class="dep-name">Tiago Albuquerque</div>
-            <div class="dep-role">Cliente ZaveleMídia</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card rev" style="transition-delay:.14s">
-        <div class="dep-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="dep-text">Mãe solo, sem tempo, sem capital. Achei que não era pra mim. Mas o suporte do Carlos foi diferente de tudo que já vi. Em 8 meses <strong>construí uma renda de 65K/mês</strong> trabalhando do celular.</p>
-        <div class="dep-result"><i class="fas fa-chart-line" style="font-size:11px"></i> 65K/mês do celular</div>
-        <div class="dep-author">
-          <div class="dep-avatar">CA</div>
-          <div>
-            <div class="dep-name">Camila Andrade</div>
-            <div class="dep-role">Aluna da Mentoria Individual</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- SOBRE -->
 <section class="section" id="sobre">
   <div class="si">
@@ -1114,7 +836,6 @@
       </div>
       <ul class="ft-links">
         <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#depoimentos">Resultados</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="/links/">Links</a></li>
       </ul>
