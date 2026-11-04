@@ -164,10 +164,7 @@
   .about h2{font-size:clamp(32px,4.2vw,52px);margin:0 0 28px}
   .about p{font-size:18px;color:var(--text);line-height:1.75;margin-bottom:22px}
   .about p strong{color:var(--text);font-weight:600}
-  .about p.purpose{
-    margin:36px 0 0;padding-top:28px;border-top:1px solid var(--line);
-    font-size:clamp(20px,2.1vw,25px);font-weight:600;letter-spacing:-.02em;line-height:1.4;color:var(--text);
-  }
+  .about p:last-child{margin-bottom:0} /* o último parágrafo não deixa folga sobrando embaixo */
 
   /* ─── FOOTER ───────────────────────────────────────────── */
   footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0 40px}
@@ -350,9 +347,7 @@
       <div class="about-text rev" style="transition-delay:.1s">
         <p><strong>Empresário e especialista em marketing digital, vendas e desenvolvimento de negócios.</strong> Fundador da Zavele Mídia e da Zavele Prime.</p>
         <p>À frente da Zavele Mídia, lidera uma agência especializada em tráfego pago, posicionamento digital e estratégias para impulsionar o crescimento de empresas.</p>
-        <p>Com sua experiência no mercado, criou a Zavele Prime, um programa de mentoria estratégica individual voltado a empresários e especialistas que desejam transformar seu conhecimento em produtos de alto valor, estruturar suas vendas e desenvolver negócios digitais escaláveis.</p>
-        <p class="purpose">Duas marcas, um propósito: transformar conhecimento e estratégia em crescimento empresarial.</p>
-      </div>
+        <p>Com sua experiência no mercado, criou a Zavele Prime, um programa de mentoria estratégica individual voltado a empresários e especialistas que desejam transformar seu conhecimento em produtos de alto valor, estruturar suas vendas e desenvolver negócios digitais escaláveis.</p>      </div>
     </div>
   </section>
 
