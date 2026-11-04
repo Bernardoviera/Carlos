@@ -40,7 +40,9 @@
     --radius:22px;
     --wrap:1120px;
     --ease:cubic-bezier(.22,.61,.36,1);
+    --vh:1vh; /* altura da tela; abaixo vira "a maior altura possível" no celular, para a foto não pular quando a barra do navegador some */
   }
+  @supports (height:100lvh){:root{--vh:1lvh}}
 
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
@@ -102,17 +104,17 @@
   .nav-ig:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
   .nav-ig svg{width:16px;height:16px}
 
-  /* ─── HERO (banner de fundo + texto à esquerda) ────────── */
-  /* A imagem mantém a proporção original (sem cortar): o Carlos ocupa sempre a mesma fração da
-     largura (as mãos dele começam em ~54%), e o texto recebe uma largura máxima que nunca passa delas.
-     A imagem começa logo abaixo do menu (68px), então o topo da cabeça nunca fica escondido por ele. */
-  .hero{position:relative;isolation:isolate;overflow:hidden;padding-top:68px}
-  .hero-media{position:absolute;top:68px;right:0;width:100%;max-width:1942px;aspect-ratio:1942/809;z-index:-1}
-  .hero-media img{display:block;width:100%;height:100%}
-  .hero::after{ /* transição suave para o preto da página */
-    content:'';position:absolute;inset:auto 0 0 0;height:120px;z-index:-1;pointer-events:none;
-    background:linear-gradient(to top,var(--bg),transparent);
+  /* ─── FUNDO FIXO + HERO ────────────────────────────────── */
+  /* O banner é o fundo da página inteira: fica FIXO na tela e o conteúdo rola por cima dele.
+     Computador: a imagem mantém a proporção original (sem cortar), então o Carlos ocupa sempre a mesma
+     fração da largura (as mãos dele começam em ~54%) e o texto do hero recebe uma largura máxima que
+     nunca passa delas. A imagem começa logo abaixo do menu (68px), então o topo da cabeça não some. */
+  .bg-fixed{
+    position:fixed;top:68px;right:0;width:100%;max-width:1942px;aspect-ratio:1942/809;z-index:-1;pointer-events:none;
+    -webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent);
   }
+  .bg-fixed img{display:block;width:100%;height:100%}
+  .hero{padding-top:68px}
   .hero-in{display:flex;align-items:center;min-height:calc(min(100vw,1942px) * .4166);padding-top:28px;padding-bottom:40px}
   .hero-copy{max-width:min(540px,calc(.54 * min(100vw,1942px) - 24px - max(28px,(100vw - 1120px) / 2 + 28px)))}
   .hero h1{font-size:clamp(38px,4.4vw,60px);line-height:1.03;letter-spacing:-.04em;margin:0 0 24px}
@@ -175,7 +177,7 @@
   }
 
   /* ─── FOOTER ───────────────────────────────────────────── */
-  footer{border-top:1px solid var(--line);padding:44px 0 40px}
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0 40px}
   .ft{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
   .ft .brand{color:var(--faint)}
   .ft-links{display:flex;gap:28px;flex-wrap:wrap}
@@ -200,16 +202,30 @@
     .services{padding-top:80px}
   }
   @media(max-width:900px){
-    /* Hero no celular/tablet: foto em cima (com fade) e o texto logo abaixo, sem cobrir o rosto */
-    .hero{padding-top:68px}
-    .hero::after{display:none}
-    .hero-media{
-      position:relative;top:auto;right:auto;width:auto;max-width:none;aspect-ratio:auto;z-index:auto;height:min(104vw,540px);
-      -webkit-mask-image:linear-gradient(to bottom,#000 66%,transparent);mask-image:linear-gradient(to bottom,#000 66%,transparent);
+    /* Celular/tablet: foto VERTICAL em tela cheia, fixa. O texto começa logo abaixo do pescoço dele
+       (a ~58% da altura da tela) e rola por cima da foto, que escurece para dar leitura ao texto */
+    .bg-fixed{
+      top:0;left:0;right:0;width:100%;max-width:none;aspect-ratio:auto;height:calc(100 * var(--vh));
+      -webkit-mask-image:none;mask-image:none;
     }
-    .hero-media img{object-fit:cover;object-position:86% 35%}
-    .hero-in{display:block;min-height:0;position:relative;margin-top:-56px;padding-top:0;padding-bottom:0}
-    .hero-copy{max-width:none;padding-bottom:56px}
+    .bg-fixed img{object-fit:cover;object-position:50% 55%}
+    .bg-fixed::before{ /* escurece a foto conforme se rola (--dim é ajustado pelo script), para o texto passar legível por cima do rosto */
+      content:'';position:absolute;inset:0;z-index:1;background:#000;opacity:var(--dim,0);pointer-events:none;
+    }
+    .bg-fixed::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 46%,rgba(0,0,0,.62) 60%,rgba(0,0,0,.9) 80%);
+    }
+    .hero{padding-top:0}
+    /* O espaço acima do texto é calculado a partir de onde o pescoço dele fica na foto (y=967 de 1672,
+       com object-position 55%), para qualquer proporção de tela. Usa .hero .hero-in para vencer o
+       .wrap{padding:0 20px} do celular. */
+    .hero .hero-in{
+      --s:max(100vw / 941, calc(100 * var(--vh) / 1672));
+      display:block;min-height:0;padding-bottom:56px;
+      padding-top:calc((100 * var(--vh) - 1672 * var(--s)) * .55 + 967 * var(--s) + 14px);
+    }
+    .hero-copy{max-width:none}
     .hero h1{font-size:clamp(34px,9.4vw,52px)}
     .hero-cta{max-width:480px}
     .hero-cta .btn{width:100%}
@@ -227,7 +243,6 @@
     .section{padding:72px 0}
     .services{padding-top:64px}
     .eyebrow{font-size:14px;margin-bottom:16px}
-    .hero{padding-top:60px}
     .bcard-logo{padding:32px 24px}
     .bcard-body{padding:28px 20px 32px}
     .btn{padding:0 16px;gap:8px;font-size:14px} /* o texto dos botões cabe em 1 linha na maioria dos celulares */
@@ -245,6 +260,14 @@
 <body>
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- FUNDO FIXO: banner horizontal no computador, foto vertical no celular/tablet (decorativo) -->
+<div class="bg-fixed" aria-hidden="true">
+  <picture>
+    <source media="(max-width:900px)" srcset="assets/images/fundo-mobile.webp" width="941" height="1672"/>
+    <img src="assets/images/banner-hero.webp" width="1942" height="809" alt="" fetchpriority="high" decoding="async"/>
+  </picture>
+</div>
 
 <!-- NAV -->
 <header class="nav">
@@ -267,9 +290,6 @@
 
   <!-- HERO -->
   <section class="hero" id="topo">
-    <div class="hero-media">
-      <img src="assets/images/banner-hero.webp" width="1942" height="809" alt="Carlos Zavele sorrindo, de suéter azul, sob luz azul" fetchpriority="high" decoding="async"/>
-    </div>
     <div class="wrap hero-in">
       <div class="hero-copy">
         <span class="eyebrow rev">Fundador da Zavele Mídia e Zavele Prime</span>
@@ -397,6 +417,20 @@
     list.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   els.forEach(function(e){io.observe(e)});
+})();
+
+/* Fundo fixo (celular): a foto escurece de 0 a ~78% nos primeiros 45% de uma tela de rolagem */
+(function(){
+  var bg=document.querySelector('.bg-fixed'); if(!bg) return;
+  var ticking=false;
+  function update(){
+    var h=window.innerHeight||800, y=window.pageYOffset||0;
+    var t=Math.min(1,Math.max(0,(y-h*0.04)/(h*0.41)));
+    bg.style.setProperty('--dim',(t*0.78).toFixed(3));
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  update();
 })();
 </script>
 </body>
