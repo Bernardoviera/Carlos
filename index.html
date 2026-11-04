@@ -177,9 +177,9 @@
   .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:88px;align-items:center}
   .about-photo{
     border-radius:28px;overflow:hidden;border:1px solid var(--line-strong);
-    aspect-ratio:4/5;background:var(--surface-2);
+    aspect-ratio:3/4;background:var(--surface-2); /* proporção da foto: aparece inteira, sem corte */
   }
-  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
   .about h2{font-size:clamp(32px,4.2vw,52px);margin:0 0 28px}
   .about p{font-size:18px;color:var(--muted);line-height:1.75;margin-bottom:22px}
   .about p strong{color:var(--text);font-weight:600}
@@ -398,7 +398,7 @@
   <section class="section about" id="sobre">
     <div class="wrap about-grid">
       <div class="about-photo rev">
-        <img src="assets/images/Carlos%201.jpeg" width="853" height="1280" alt="Carlos Zavele sorrindo" loading="lazy" decoding="async"/>
+        <img src="assets/images/carlos-sobre.webp" width="1000" height="1333" alt="Carlos Zavele em videochamada no escritório" loading="lazy" decoding="async"/>
       </div>
       <div class="rev" style="transition-delay:.1s">
         <h2>Quem é Carlos Zavele?</h2>
