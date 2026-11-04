@@ -111,12 +111,11 @@
   .nav-ig svg{width:16px;height:16px}
 
   /* ─── HERO ─────────────────────────────────────────────── */
-  .hero{position:relative;padding:148px 0 96px;overflow:hidden}
-  .hero::before{
-    content:'';position:absolute;top:-220px;right:-180px;width:820px;height:820px;pointer-events:none;
-    background:radial-gradient(closest-side,rgba(63,176,244,.16),transparent 72%);
-  }
-  .hero-grid{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center}
+  /* A base do recorte encosta na linha que separa o hero da faixa de números:
+     o hero não tem padding embaixo; o respiro do texto vem do .hero-copy */
+  .hero{position:relative;padding:112px 0 0;overflow:hidden}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:end}
+  .hero-copy{align-self:center;padding-bottom:72px}
   .hero h1{
     font-size:clamp(40px,5.3vw,70px);font-weight:700;line-height:1.02;letter-spacing:-.04em;
     margin:26px 0 28px;
@@ -125,19 +124,14 @@
   .hero-sub strong{color:var(--text);font-weight:600}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
-  .portrait{
-    position:relative;border-radius:28px;overflow:hidden;
-    border:1px solid var(--line-strong);background:var(--surface);
-    aspect-ratio:4/5;box-shadow:0 40px 90px rgba(0,0,0,.6);
+  /* Recorte do Carlos (PNG sem fundo → WebP com alpha), ancorado na base do hero */
+  .cutout{position:relative;isolation:isolate;justify-self:end;width:min(100%,clamp(340px,50vh,470px))}
+  .cutout::before{ /* brilho azul atrás do Carlos */
+    content:'';position:absolute;z-index:-1;inset:6% -28% 0 -28%;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(63,176,244,.26),rgba(47,127,227,.08) 55%,transparent 75%);
   }
-  .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
-  .portrait::after{
-    content:'';position:absolute;inset:auto 0 0 0;height:42%;pointer-events:none;
-    background:linear-gradient(to top,rgba(0,0,0,.82),transparent);
-  }
-  .portrait-cap{position:absolute;left:26px;bottom:24px;z-index:2}
-  .portrait-cap strong{display:block;font-size:19px;font-weight:700;letter-spacing:-.02em}
-  .portrait-cap span{font-size:13px;color:var(--muted)}
+  .cutout img{display:block;width:100%;height:auto}
+  .js .cutout.rev{transform:none} /* só em fade: a base fica sempre rente à linha */
 
   /* ─── NÚMEROS ──────────────────────────────────────────── */
   .proof{border-block:1px solid var(--line);background:var(--surface)}
@@ -230,9 +224,10 @@
 
   /* ─── RESPONSIVO ───────────────────────────────────────── */
   @media(max-width:960px){
-    .hero{padding:124px 0 72px}
-    .hero-grid{grid-template-columns:1fr;gap:56px}
-    .portrait{max-width:440px;aspect-ratio:4/4.6}
+    .hero{padding:112px 0 0}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-copy{padding-bottom:0}
+    .cutout{justify-self:center;width:min(100%,400px)}
     .about-grid{grid-template-columns:1fr;gap:48px}
     .about-photo{max-width:440px}
     .section{padding:96px 0}
@@ -251,7 +246,8 @@
     .nav-ig span{display:none}
     .nav-ig{padding:0;width:40px;justify-content:center}
     .brand{font-size:13px;letter-spacing:.18em}
-    .hero{padding:104px 0 56px}
+    .hero{padding:96px 0 0}
+    .cutout{width:min(100%,340px)}
     .hero .eyebrow{font-size:11px;letter-spacing:.1em;text-wrap:balance}
     .hero .eyebrow::before{display:none}
     .hero h1{margin:20px 0 22px}
@@ -299,7 +295,7 @@
   <!-- HERO -->
   <section class="hero" id="topo">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-copy">
         <span class="eyebrow rev">Fundador da Zavele Mídia e Zavele Private</span>
         <h1 class="rev" style="transition-delay:.06s">Conhecimento e estratégia em <span class="grad">crescimento empresarial.</span></h1>
         <p class="hero-sub rev" style="transition-delay:.12s">
@@ -314,12 +310,8 @@
         </div>
       </div>
 
-      <figure class="portrait rev" style="transition-delay:.14s">
-        <img src="assets/images/Carlos%202.jpeg" width="853" height="1280" alt="Retrato de Carlos Zavele" fetchpriority="high" decoding="async"/>
-        <figcaption class="portrait-cap">
-          <strong>Carlos Zavele</strong>
-          <span>Empresário e especialista em marketing digital</span>
-        </figcaption>
+      <figure class="cutout rev" style="transition-delay:.14s">
+        <img src="assets/images/carlos-recorte.webp" width="977" height="1441" alt="Carlos Zavele" fetchpriority="high" decoding="async"/>
       </figure>
     </div>
   </section>
