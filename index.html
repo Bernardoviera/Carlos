@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Carlos Zavele | Zavele Mídia &amp; Zavele Private</title>
-  <meta name="description" content="Carlos Zavele, empresário e especialista em marketing digital, vendas e desenvolvimento de negócios. Fundador da Zavele Mídia (tráfego pago, criação de páginas e lojas, reestruturação) e da Zavele Private (mentoria estratégica individual)."/>
+  <title>Carlos Zavele | Zavele Mídia &amp; Zavele Prime</title>
+  <meta name="description" content="Carlos Zavele, empresário e especialista em marketing digital, vendas e desenvolvimento de negócios. Fundador da Zavele Mídia (tráfego pago, criação de páginas e lojas, reestruturação) e da Zavele Prime (mentoria estratégica individual)."/>
   <meta name="theme-color" content="#000000"/>
 
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="pt_BR"/>
-  <meta property="og:title" content="Carlos Zavele | Zavele Mídia &amp; Zavele Private"/>
+  <meta property="og:title" content="Carlos Zavele | Zavele Mídia &amp; Zavele Prime"/>
   <meta property="og:description" content="Duas marcas, um propósito: transformar conhecimento e estratégia em crescimento empresarial."/>
   <meta name="twitter:card" content="summary"/>
 
@@ -27,7 +27,7 @@
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
   :root{
-    /* Paleta extraída dos logos Zavele Mídia / Zavele Private */
+    /* Paleta extraída dos logos Zavele Mídia / Zavele Prime */
     --bg:#000;
     --surface:#08090d;
     --surface-2:#0d0f15;
@@ -117,7 +117,7 @@
     background:#030407;border-right:1px solid var(--line);
   }
   .bcard-logo img{width:min(100%,360px)}
-  .bcard-logo img.logo-private{width:min(100%,400px)} /* mais largo: a frase do logo é pequena */
+  .bcard-logo img.logo-prime{width:min(100%,400px)} /* mais largo: a frase do logo é pequena */
   .bcard-body{display:flex;flex-direction:column;padding:44px 48px 48px}
   .tag{font-size:15px;font-weight:600;color:var(--blue)}
   .bcard-body h3{font-size:28px;margin:12px 0 14px;letter-spacing:-.025em}
@@ -127,14 +127,10 @@
     list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;
     margin:28px 0 0;padding-top:28px;border-top:1px solid var(--line);
   }
-  .svc.svc-1{grid-template-columns:1fr} /* uma coluna: usado quando os itens são longos (Zavele Private) */
+  .svc.svc-1{grid-template-columns:1fr} /* uma coluna: usado quando os itens são longos (Zavele Prime) */
   .svc li{display:flex;gap:14px;font-size:15px;font-weight:500;line-height:1.5;text-wrap:balance}
   .svc svg{flex:none;width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
   .bcard .btn{margin-top:36px;align-self:flex-start}
-  /* Botão + frase de apoio logo abaixo (Zavele Private) */
-  .cta{margin-top:36px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
-  .cta .btn{margin-top:0;text-align:center}
-  .cta-note{font-size:14px;line-height:1.5;color:var(--text);text-wrap:balance}
 
   /* ─── SOBRE ────────────────────────────────────────────── */
   .about{background:var(--surface);border-top:1px solid var(--line)}
@@ -202,8 +198,6 @@
     .btn{padding:0 16px;gap:8px;font-size:14px} /* o texto dos botões cabe em 1 linha na maioria dos celulares */
     .svc{grid-template-columns:1fr}
     .bcard .btn{align-self:stretch}
-    .cta{align-items:stretch}
-    .cta-note{text-align:center}
     .ft{flex-direction:column;align-items:flex-start}
   }
   @media(prefers-reduced-motion:reduce){
@@ -239,7 +233,7 @@
   <!-- SERVIÇOS -->
   <section class="section services" id="servicos">
     <div class="wrap">
-      <h1 class="sr-only">Carlos Zavele: Zavele Mídia e Zavele Private</h1>
+      <h1 class="sr-only">Carlos Zavele: Zavele Mídia e Zavele Prime</h1>
 
       <div class="brands">
 
@@ -273,14 +267,14 @@
           </div>
         </article>
 
-        <!-- Zavele Private -->
+        <!-- Zavele Prime -->
         <article class="bcard rev" style="transition-delay:.1s">
           <div class="bcard-logo">
-            <img class="logo-private" src="assets/images/logo-zavele-private.webp" width="1200" height="266" alt="Zavele Private — Transforme seu conhecimento em uma mentoria de alto valor" loading="lazy" decoding="async"/>
+            <img class="logo-prime" src="assets/images/logo-zavele-prime.webp" width="1200" height="269" alt="Zavele Prime — Transforme seu conhecimento em uma mentoria de alto valor" loading="lazy" decoding="async"/>
           </div>
           <div class="bcard-body">
             <span class="tag">Mentoria individual</span>
-            <h3>Zavele Private</h3>
+            <h3>Zavele Prime</h3>
             <p>Programa de mentoria estratégica individual para empresários e especialistas que desejam transformar seu conhecimento em produtos de alto valor.</p>
             <ul class="svc svc-1">
               <!-- diamante -->
@@ -296,13 +290,10 @@
               <!-- pessoa com check (marca pessoal) -->
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>Construção de marca pessoal e autoridade digital</li>
             </ul>
-            <div class="cta">
-              <a class="btn btn-primary" href="https://8949b7e6b079.quillforms.app/forms/formulario-para-medico" target="_blank" rel="noopener noreferrer">
-                Quero estruturar minha mentoria
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <p class="cta-note">Acompanhamento individual para empresários e especialistas</p>
-            </div>
+            <a class="btn btn-primary" href="https://8949b7e6b079.quillforms.app/forms/formulario-para-medico" target="_blank" rel="noopener noreferrer">
+              Quero estruturar minha mentoria
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
         </article>
 
@@ -318,9 +309,9 @@
         <img src="assets/images/carlos-sobre.webp" width="1000" height="1333" alt="Carlos Zavele em videochamada no escritório" loading="lazy" decoding="async"/>
       </div>
       <div class="about-text rev" style="transition-delay:.1s">
-        <p><strong>Empresário e especialista em marketing digital, vendas e desenvolvimento de negócios.</strong> Fundador da Zavele Mídia e da Zavele Private.</p>
+        <p><strong>Empresário e especialista em marketing digital, vendas e desenvolvimento de negócios.</strong> Fundador da Zavele Mídia e da Zavele Prime.</p>
         <p>À frente da Zavele Mídia, lidera uma agência especializada em tráfego pago, posicionamento digital e estratégias para impulsionar o crescimento de empresas.</p>
-        <p>Com sua experiência no mercado, criou a Zavele Private, um programa de mentoria estratégica individual voltado a empresários e especialistas que desejam transformar seu conhecimento em produtos de alto valor, estruturar suas vendas e desenvolver negócios digitais escaláveis.</p>
+        <p>Com sua experiência no mercado, criou a Zavele Prime, um programa de mentoria estratégica individual voltado a empresários e especialistas que desejam transformar seu conhecimento em produtos de alto valor, estruturar suas vendas e desenvolver negócios digitais escaláveis.</p>
         <p class="purpose">Duas marcas, um propósito: transformar conhecimento e estratégia em crescimento empresarial.</p>
       </div>
     </div>
@@ -340,7 +331,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
       </a>
     </div>
-    <p class="copy">© 2026 Carlos Zavele · Zavele Mídia · Zavele Private. Todos os direitos reservados.</p>
+    <p class="copy">© 2026 Carlos Zavele · Zavele Mídia · Zavele Prime. Todos os direitos reservados.</p>
   </div>
 </footer>
 
