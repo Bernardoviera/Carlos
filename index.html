@@ -114,10 +114,12 @@
   /* A base do recorte encosta na linha que separa o hero da faixa de números:
      o hero não tem padding embaixo; o respiro do texto vem do .hero-copy */
   .hero{position:relative;padding:112px 0 0;overflow:hidden}
-  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:end}
-  .hero-copy{align-self:center;padding-bottom:72px}
+  /* Coluna do recorte com largura própria (proporcional à tela); o texto ocupa o resto */
+  .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+  .hero-copy{align-self:start;padding:24px 0 72px} /* telas baixas: texto no topo, CTA sempre na 1ª dobra */
+  @media(min-height:820px){.hero-copy{align-self:center;padding-top:0}} /* telas altas: centralizado */
   .hero h1{
-    font-size:clamp(40px,5.3vw,70px);font-weight:700;line-height:1.02;letter-spacing:-.04em;
+    font-size:clamp(38px,5vw,58px);font-weight:700;line-height:1.02;letter-spacing:-.04em;
     margin:26px 0 28px;
   }
   .hero-sub{font-size:clamp(17px,1.5vw,19px);line-height:1.65;color:var(--muted);max-width:520px;margin-bottom:40px}
@@ -125,7 +127,7 @@
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
   /* Recorte do Carlos (PNG sem fundo → WebP com alpha), ancorado na base do hero */
-  .cutout{position:relative;isolation:isolate;justify-self:end;width:min(100%,clamp(340px,50vh,470px))}
+  .cutout{position:relative;isolation:isolate;justify-self:end;width:clamp(380px,46vw,560px)}
   .cutout::before{ /* brilho azul atrás do Carlos */
     content:'';position:absolute;z-index:-1;inset:6% -28% 0 -28%;pointer-events:none;
     background:radial-gradient(closest-side,rgba(63,176,244,.26),rgba(47,127,227,.08) 55%,transparent 75%);
@@ -226,8 +228,9 @@
   @media(max-width:960px){
     .hero{padding:112px 0 0}
     .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-copy{padding-bottom:0}
-    .cutout{justify-self:center;width:min(100%,400px)}
+    .hero-copy{align-self:auto;padding:0}
+    .hero h1{font-size:clamp(40px,5.3vw,70px)} /* empilhado: tem a largura toda, mantém o tamanho anterior */
+    .cutout{justify-self:center;width:min(100%,520px)}
     .about-grid{grid-template-columns:1fr;gap:48px}
     .about-photo{max-width:440px}
     .section{padding:96px 0}
@@ -247,7 +250,7 @@
     .nav-ig{padding:0;width:40px;justify-content:center}
     .brand{font-size:13px;letter-spacing:.18em}
     .hero{padding:96px 0 0}
-    .cutout{width:min(100%,340px)}
+    .cutout{width:min(100%,420px)}
     .hero .eyebrow{font-size:11px;letter-spacing:.1em;text-wrap:balance}
     .hero .eyebrow::before{display:none}
     .hero h1{margin:20px 0 22px}
